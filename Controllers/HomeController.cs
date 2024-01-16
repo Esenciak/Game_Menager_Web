@@ -1,4 +1,4 @@
-using Game_Menager_Web.Models;
+ using Game_Menager_Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc.Rendering;
