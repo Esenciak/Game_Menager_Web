@@ -4,3 +4,8 @@
 	Category => zapas zobaczymy co będzie w kursie
 
 	Migracja sql, stworzenie bazy
+
+	użyj update-database w konsoli 
+
+	Ogarnąć sql żeby razem uzywać
+
