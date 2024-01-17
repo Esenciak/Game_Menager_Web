@@ -6,6 +6,7 @@ namespace Game_Menager_Web.Controllers
     {
         public IActionResult Index()
         {
+            // przekierowuje na stronę do logowania
             return View();
         }
     }
