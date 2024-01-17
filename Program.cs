@@ -36,7 +36,7 @@ namespace Game_Menager_Web
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{controller=Home}/{action=Logowanie}/{id?}");
+				pattern: "{controller=Home}/{action=Index}/{id?}");
 
 			app.Run();
 		}
