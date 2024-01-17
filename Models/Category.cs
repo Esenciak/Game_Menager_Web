@@ -4,9 +4,10 @@ namespace Game_Menager_Web.Models
 {
     public class Category
     {
+        // to jest klucz mega potrzebny
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required] // to oznacza że name musi być inaczej nie puści 
         public string Name { get; set; }
 
         public int DisplayOrder { get; set; }

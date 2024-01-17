@@ -12,7 +12,11 @@ namespace Game_Menager_Web.Data
 
         //Klasa która będzie tworzona i obsługiwana, nazwa to 
         // Table które będzie tworzone w SQL
+
+
+        // tworzy Db Categoeirs w SQL
         public DbSet<Category> Categories { get; set; }
+        // tworzy Db Hero w SQL
         public DbSet<Hero> Heroes { get; set; }
     }
 }

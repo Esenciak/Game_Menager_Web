@@ -5,7 +5,17 @@
 
 	Migracja sql, stworzenie bazy
 
+
+
 	użyj update-database w konsoli 
+
+	Komendy SQL:
+	Remove-Migration - usuwa migracje
+
+	najpierw usuń migrację w katalogu migracje, zostać snapshota, potem wpisz
+	add-migration AddCategoryTableToDb
+	a potem
+	update-database
 
 	Ogarnąć sql żeby razem uzywać
 

@@ -16,18 +16,16 @@ namespace Game_Menager_Web.Controllers
 
 		public IActionResult Index()
 		{
+			// przekierowuje na index
 			return View();
 		}
 
 		public IActionResult Privacy()
 		{
+			// przekierowuje na privacy
 			return View();
 		}
 
-		public IActionResult Logowanie()
-		{
-			return View();
-		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
