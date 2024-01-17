@@ -1,3 +1,6 @@
+using Game_Menager_Web.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Game_Menager_Web
 {
 	public class Program
@@ -8,6 +11,10 @@ namespace Game_Menager_Web
 
 			// Add services to the container.
 			builder.Services.AddControllersWithViews();
+
+			builder.Services.AddDbContext<ApplicationDbContext>(options=> 
+				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
+
 
 			var app = builder.Build();
 
