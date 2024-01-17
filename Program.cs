@@ -16,6 +16,7 @@ namespace Game_Menager_Web
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
 
 
+
 			var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
