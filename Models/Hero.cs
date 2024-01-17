@@ -22,5 +22,7 @@ namespace Game_Menager_Web.Models
         public string Skill { get; set; }
         public int SkillRank { get; set; }
         public string SkillDescription { get; set; }
+
+        public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }
