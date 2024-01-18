@@ -19,3 +19,7 @@
 
 	Ogarnąć sql żeby razem uzywać
 
+	Tu mamy spis ikon które dodałem
+	https://icons.getbootstrap.com
+	Z tego linku wziąłem bootstrap ,,LUX''
+	https://bootswatch.com
