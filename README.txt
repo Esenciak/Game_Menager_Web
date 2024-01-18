@@ -22,3 +22,13 @@
 	https://icons.getbootstrap.com
 	Z tego linku wziąłem bootstrap ,,LUX''
 	https://bootswatch.com
+
+	Tag helper przy tworzeniu np guzików albo miejsc na wpisanie czegoś oda razu wie co ma być np int albo string
+	<div class="mb-3 row p-1">
+			<label asp-for="Name" class="p-0"></label>
+			<input asp-for="Name" class="form-control" />
+		</div>
+		<div class="mb-3 row p-1">
+			<label asp-for="DisplayOrder" class="p-0"></label>
+			<input asp-for="DisplayOrder" class="form-control"/>
+		</div>

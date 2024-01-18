@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Game_Menager_Web.Models
 {
@@ -8,8 +9,10 @@ namespace Game_Menager_Web.Models
         [Key]
         public int Id { get; set; }
         [Required] // to oznacza że name musi być inaczej nie puści 
-        public string Name { get; set; }
-
+        // jak wywołamu w np html Name to wyświetli się Category name
+		[DisplayName("Category Name")]
+		public string Name { get; set; }
+        [DisplayName("Display Order")]
         public int DisplayOrder { get; set; }
 
         //Można użyć do zapisywania daty edycji

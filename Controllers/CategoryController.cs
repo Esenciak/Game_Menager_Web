@@ -19,5 +19,11 @@ namespace Game_Menager_Web.Controllers
             // przekierowuje na stronę do logowania
             return View(objCategoryList);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
     }
 }
