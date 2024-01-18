@@ -11,7 +11,6 @@
 
 	Komendy SQL:
 	Remove-Migration - usuwa migracje
-
 	najpierw usuń migrację w katalogu migracje, zostać snapshota, potem wpisz
 	add-migration AddCategoryTableToDb
 	a potem
