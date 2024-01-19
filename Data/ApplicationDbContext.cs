@@ -19,7 +19,7 @@ namespace Game_Menager_Web.Data
 
 
         // dodaje dane do bazy sql Categories
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+       /* protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
                 new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
@@ -27,11 +27,11 @@ namespace Game_Menager_Web.Data
                 new Category { Id = 3, Name = "History", DisplayOrder = 3 }
                 );
         }
-
+       */
         // tworzy Db Hero w SQL
         public DbSet<Hero> Heroes { get; set; }
 
-        /* dodaje dane do bazy sql Heroes
+        // dodaje dane do bazy sql Heroes
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Hero>().HasData(
@@ -53,7 +53,7 @@ namespace Game_Menager_Web.Data
                 }
                 );
         }
-            */
+            
 
     }
 }
