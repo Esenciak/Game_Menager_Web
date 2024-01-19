@@ -1,8 +1,71 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menager - D&D</title>
+    <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Gothic', sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1080px;
+  }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+  .container {
+      width: 400px;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+  }
+
+  h1 {
+      font-size: 2em;
+      color: #c0c0c0;
+      margin-bottom: 20px;
+  }
+
+  .intro {
+      font-size: 1em;
+      margin-bottom: 30px;
+      color: #a9a9a9;
+  }
+
+  .login-button {
+      padding: 10px 20px;
+      background-color: #444;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  .login-button:hover {
+      background-color: #666;
+  }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Game Menager - D&D</h1>
+        <p class="intro">
+            W mrocznym świecie, gdzie cienie kryją sekrety, a odwaga jest kluczem do przetrwania,
+            wyrusz na niezwykłą podróż pełną niebezpieczeństw i odkryć...
+        </p>
+        <button class="login-button">Zaloguj się</button>
+    </div>
+</body>
+</html>
