@@ -2,7 +2,7 @@
 
 namespace Game_Menager_Web.Controllers
 {
-    public class KartaPostaciController:Controller
+    public class KartaPostaciController : Controller
     {
         public IActionResult Index()
         {
