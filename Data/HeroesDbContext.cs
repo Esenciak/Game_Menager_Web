@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Game_Menager_Web.Data
 {
-    public class HeroesDbContext
+    public class HeroesDbContext : DbContext
     {
 
-        public HeroesDbContext(DbContextOptions<HeroesDbContext> opcje) : base(opcje)
+        public HeroesDbContext(DbContextOptions<HeroesDbContext> options) : base(options)
         {
 
         }

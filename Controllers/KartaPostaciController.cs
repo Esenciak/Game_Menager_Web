@@ -1,10 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Game_Menager_Web.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Game_Menager_Web.Controllers
 {
-    public class KartaPostaci : Controller
+    public class KartaPostaciController : Controller
     {
+        private readonly ApplicationDbContext _db;
+        public KartaPostaciController(ApplicationDbContext db)
+        {
+            _db = db;
+        }
+
         // GET: KartaPostaci
         public ActionResult Index()
         {
