@@ -28,9 +28,11 @@ namespace Game_Menager_Web.Controllers
         [HttpPost]
 		public IActionResult Create(Category obj)
 		{
-            // dodaje do tabeli
-            _db.Categories.Add(obj);
-            _db.SaveChanges(); // zapisujemy zmiany w bazie 
+            if (ModelState.IsValid)
+            {
+				_db.Categories.Add(obj); // dodaje do tabeli
+				_db.SaveChanges(); // zapisujemy zmiany w bazie 
+			}           
 			return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 		}
 
