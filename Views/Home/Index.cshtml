@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Menager - D&D</title>
     <style>
-    body {
+  /* Style wyglądu strony */
+  body {
       margin: 0;
       padding: 0;
       font-family: 'Gothic', sans-serif;
@@ -33,13 +34,13 @@
       color: #c0c0c0;
       margin-bottom: 20px;
   }
-
+/* Styl krótkiej opowieści */
   .intro {
       font-size: 1em;
       margin-bottom: 30px;
       color: #a9a9a9;
   }
-
+ /* Style dla guzików */
   .login-button {
       padding: 10px 20px;
       background-color: #444;
@@ -58,14 +59,19 @@
     </style>
 </head>
 <body>
-  <div class="text-center">
+  <div class="text-center"> /* środkuje pomiędzy hederem i footerem */
     <div class="container">
         <h1>Game Menager - D&D</h1>
         <p class="intro">
             W mrocznym świecie, gdzie cienie kryją sekrety, a odwaga jest kluczem do przetrwania,
             wyrusz na niezwykłą podróż pełną niebezpieczeństw i odkryć...
         </p>
+<<<<<<< HEAD
             <a asp-controller="Loggin" asp-action="Index" class="btn btn-primary mx-2 btn-outline-danger">
+=======
+        /* guzik*/
+            <a asp-controller="Loggin" asp-action="Index" class="btn btn-primary mx-2 login-button ">
+>>>>>>> d7768469aa147dbb414bb51d9ea20bbfadc93620
                 Zaloguj się
             </a>
     </div>
