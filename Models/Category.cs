@@ -14,7 +14,7 @@ namespace Game_Menager_Web.Models
 		[DisplayName("Category Name")]
 		public string Name { get; set; }
         [DisplayName("Display Order")]
-        [Range(1,100)] // numer w zakresie od 1 do 100
+        [Range(1,100,ErrorMessage ="Numer musi być pomiędzy 1-100")] // numer w zakresie od 1 do 100, custom error message
         public int DisplayOrder { get; set; }
 
         //Można użyć do zapisywania daty edycji

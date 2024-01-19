@@ -41,3 +41,5 @@
 		musi być
 		<form metod="Post" asp-action="Create">
 		ponieważ używamy tagów w asp .net i musimy pokazać nazwę metody która ma być w post
+
+		<div asp-validation-summary="All"></div> wypisuje listę co musi być np hasło od 8 znaków itd
