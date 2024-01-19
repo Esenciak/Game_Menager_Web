@@ -32,3 +32,12 @@
 			<label asp-for="DisplayOrder" class="p-0"></label>
 			<input asp-for="DisplayOrder" class="form-control"/>
 		</div>
+
+
+		w Create.cshtml
+
+		zamiast
+		<form metod="Post">
+		musi być
+		<form metod="Post" asp-action="Create">
+		ponieważ używamy tagów w asp .net i musimy pokazać nazwę metody która ma być w post
