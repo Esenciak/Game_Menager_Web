@@ -32,8 +32,9 @@ namespace Game_Menager_Web.Controllers
             {
 				_db.Categories.Add(obj); // dodaje do tabeli
 				_db.SaveChanges(); // zapisujemy zmiany w bazie 
-			}           
-			return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
+				return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
+			}
+            return View();
 		}
 
 	}
