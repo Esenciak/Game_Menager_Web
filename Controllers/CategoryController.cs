@@ -25,5 +25,14 @@ namespace Game_Menager_Web.Controllers
             return View();
         }
 
-    }
+        [HttpPost]
+		public IActionResult Create(Category obj)
+		{
+            // dodaje do tabeli
+            _db.Categories.Add(obj);
+            _db.SaveChanges(); // zapisujemy zmiany w bazie 
+			return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
+		}
+
+	}
 }

@@ -30,9 +30,6 @@ namespace Game_Menager_Web.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedDateTime")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("DisplayOrder")
                         .HasColumnType("int");
 
@@ -48,21 +45,18 @@ namespace Game_Menager_Web.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDateTime = new DateTime(2024, 1, 17, 19, 57, 53, 919, DateTimeKind.Local).AddTicks(9634),
                             DisplayOrder = 1,
                             Name = "Action"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDateTime = new DateTime(2024, 1, 17, 19, 57, 53, 919, DateTimeKind.Local).AddTicks(9710),
                             DisplayOrder = 2,
                             Name = "SciFi"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDateTime = new DateTime(2024, 1, 17, 19, 57, 53, 919, DateTimeKind.Local).AddTicks(9712),
                             DisplayOrder = 3,
                             Name = "History"
                         });

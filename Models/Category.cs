@@ -16,6 +16,6 @@ namespace Game_Menager_Web.Models
         public int DisplayOrder { get; set; }
 
         //Można użyć do zapisywania daty edycji
-        public DateTime CreatedDateTime { get; set; } = DateTime.Now;
+      //  public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }
