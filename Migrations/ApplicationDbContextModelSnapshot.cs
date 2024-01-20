@@ -22,30 +22,6 @@ namespace Game_Menager_Web.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Game_Menager_Web.Models.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedDateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DisplayOrder")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("Game_Menager_Web.Models.Heroes", b =>
                 {
                     b.Property<int>("Id")
@@ -97,8 +73,8 @@ namespace Game_Menager_Web.Migrations
 
                     b.Property<string>("SkillDescription")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<int>("SkillRank")
                         .HasColumnType("int");
@@ -123,7 +99,7 @@ namespace Game_Menager_Web.Migrations
                         {
                             Id = 1,
                             Age = 1200,
-                            CreatedDateTime = new DateTime(2024, 1, 20, 9, 23, 16, 824, DateTimeKind.Local).AddTicks(7527),
+                            CreatedDateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "elf pochodzący ze szczepu Sindarów. W Trzeciej Erze był członkiem Drużyny Pierścienia.",
                             Dexterity = 100,
                             Gender = "Male",
