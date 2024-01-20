@@ -1,7 +1,7 @@
 ﻿@model Heroes
 <!DOCTYPE html>
 <html lang="pl">
-<form metod="Post" asp-action="Karta">
+<form metod="Post" asp-action="KartaPos"></form>
 <input asp-for="Id" hidden />
 
 <head>
@@ -152,12 +152,12 @@
 
   <!-- Sekcja statystyk -->
   <div class="stats-section section">
-    <input type="text" placeholder="LVL postaci">
-    <input type="text" placeholder="Hp postaci">
-    <input type="text" placeholder="Speed postaci">
-    <input type="text" placeholder="Złoto postaci">
-    <input type="text" placeholder="Mądrość postaci">
-    <input type="text" placeholder="Zwinność postaci">
+    <input type="text" placeholder=@Model.Level>
+    <input type="text" placeholder=@Model.HP>
+    <input type="text" placeholder=@Model.Speed">
+    <input type="text" placeholder=@Model.Gold>
+    <input type="text" placeholder=@Model.Mana>
+    <input type="text" placeholder=@Model.Dexterity>
   </div>
 
   <!-- Sekcja Zdjecia -->
