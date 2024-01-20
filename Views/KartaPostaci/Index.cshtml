@@ -36,9 +36,9 @@
 			@foreach (var obj in Model.OrderBy(u => u.Id))
 			{
 				<tr>
-					<td>@obj.Name</td>
+					<td>@obj.Name</td> @*Tu damy Login gracza*@
 					<td>
-						@obj.Race
+						@obj.Race @*A tu nazwę postaci żeby łatwiej było wyszukiwać*@
 					</td>
 					<td>
 						<div class="w-75 btn-group" role="group">
