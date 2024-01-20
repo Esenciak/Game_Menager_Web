@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Game_Menager_Web.Models
 {
@@ -32,20 +33,24 @@ namespace Game_Menager_Web.Models
 		[Range(1, 100, ErrorMessage = "Numer musi być pomiędzy 1-100")]
 		public int Dexterity { get; set; } = 10;
 		[Required]
-		[Range(1, 999, ErrorMessage = "Numer musi być pomiędzy 1-999")]
+		[Range(0, 999, ErrorMessage = "Numer musi być pomiędzy 0-999")]
 		public int Mana { get; set; } = 10;
 		[Required]
 		public string Gender { get; set; } = "Male";
 		[Required]
 		[MaxLength(30)]
+		[DisplayName("Broń")]
 		public string Weapon { get; set; } = "test";
 		[Required]
 		[MaxLength(40)]
+		[DisplayName("Umiejętność Główna")]
 		public string Skill { get; set; } = "test";
 		[Required]
+		[DisplayName("Poziom Głównej Umiejętności")]
 		public int SkillRank { get; set; } = 10;
 		[Required]
 		[MaxLength(50)]
+		[DisplayName("Opis Głównej umiejętności")]
 		public string SkillDescription { get; set; } = "test";
 
 		public DateTime CreatedDateTime { get; set; } = DateTime.Now;
