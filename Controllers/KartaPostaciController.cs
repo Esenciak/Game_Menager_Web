@@ -42,6 +42,31 @@ namespace Game_Menager_Web.Controllers
 			}
 			return View();
 		}
+		public IActionResult Edit(int? id)
+		{
+			if(id==null || id==0)
+			{
+				return NotFound();
+			}
+			return View();
+		}
+
+
+		[HttpPost]
+		public IActionResult Edit(Heroes obj)
+		{
+			if (obj.Name != null && obj.Name.ToLower() == "test")
+			{
+				ModelState.AddModelError("", "Test is an invalid value");
+			}
+			if (ModelState.IsValid)
+			{
+				_db.Heroes.Add(obj); // dodaje do tabeli
+				_db.SaveChanges(); // zapisujemy zmiany w bazie 
+				return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
+			}
+			return View();
+		}
 
 
 
