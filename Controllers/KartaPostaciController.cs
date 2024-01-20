@@ -22,7 +22,6 @@ namespace Game_Menager_Web.Controllers
 		}
 		public IActionResult Create()
 		{
-			
 			return View();
 		}
 
@@ -48,7 +47,14 @@ namespace Game_Menager_Web.Controllers
 			{
 				return NotFound();
 			}
-			return View();
+			Heroes heroesFromDb = _db.Heroes.Find(id);
+			//Heroes heroesFromDb2 = _db.Heroes.FirstOrDefault(u=>u.Id==id); inne werjse wyszukiwania id do edycji
+			//Heroes heroesFromDb3 = _db.Heroes.Where(u=>u.Id==id).FirstOrDefault();
+			if (heroesFromDb == null)
+			{
+				return NotFound();
+			}
+			return View(heroesFromDb);
 		}
 
 

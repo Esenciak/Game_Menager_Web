@@ -15,7 +15,7 @@ namespace Game_Menager_Web.Data
 
 
         // tworzy Db Categoeirs w SQL
-        public DbSet<Category> Categories { get; set; }
+       // public DbSet<Category> Categories { get; set; }
 
 
         // dodaje dane do bazy sql Categories
