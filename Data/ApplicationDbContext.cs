@@ -12,22 +12,8 @@ namespace Game_Menager_Web.Data
 
         //Klasa która będzie tworzona i obsługiwana, nazwa to 
         // Table które będzie tworzone w SQL
+ 
 
-
-        // tworzy Db Categoeirs w SQL
-       // public DbSet<Category> Categories { get; set; }
-
-
-        // dodaje dane do bazy sql Categories
-       /* protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
-                new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
-                new Category { Id = 3, Name = "History", DisplayOrder = 3 }
-                );
-        }
-       */
         // tworzy Db Hero w SQL
         public DbSet<Heroes> Heroes { get; set; }
 
