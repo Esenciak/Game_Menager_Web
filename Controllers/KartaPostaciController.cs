@@ -61,13 +61,9 @@ namespace Game_Menager_Web.Controllers
 		[HttpPost]
 		public IActionResult Edit(Heroes obj)
 		{
-			if (obj.Name != null && obj.Name.ToLower() == "test")
-			{
-				ModelState.AddModelError("", "Test is an invalid value");
-			}
 			if (ModelState.IsValid)
 			{
-				_db.Heroes.Add(obj); // dodaje do tabeli
+				_db.Heroes.Update(obj); // dodaje do tabeli
 				_db.SaveChanges(); // zapisujemy zmiany w bazie 
 				return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 			}
