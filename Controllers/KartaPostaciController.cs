@@ -90,9 +90,9 @@ namespace Game_Menager_Web.Controllers
 
 
 		[HttpPost, ActionName("Delete")]
-		public IActionResult DeletePOST(int? Heroesid)
+		public IActionResult DeletePOST(int? id)
 		{
-			Heroes obj = _db.Heroes.Find(Heroesid);
+			Heroes? obj = _db.Heroes.Find(id);
 			if (obj == null) 
 			{
 				return NotFound();
