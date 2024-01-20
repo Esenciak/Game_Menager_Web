@@ -35,8 +35,7 @@ namespace Game_Menager_Web.Models
 		[Range(1, 999, ErrorMessage = "Numer musi być pomiędzy 1-999")]
 		public int Mana { get; set; } = 10;
 		[Required]
-		[Range(1, 100, ErrorMessage = "0=Mężczyzna 1=Kobieta")]
-		public int Male { get; set; } = 0;
+		public string Gender { get; set; } = "Male";
 		[Required]
 		[MaxLength(30)]
 		public string Weapon { get; set; } = "test";

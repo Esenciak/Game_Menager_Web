@@ -45,7 +45,7 @@ namespace Game_Menager_Web.Data
                     Strenght = 40,
                     Dexterity = 100,
                     Mana = 20,
-                    Male = 0,
+                    Gender = "Male",
                     Weapon = "Bow",
                     Skill = "Ciche kroki",
                     SkillRank = 5,

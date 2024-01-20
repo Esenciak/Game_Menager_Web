@@ -36,7 +36,10 @@
 				<option value="harpii">Harpy</option>
 				<option value="minotaur">Minotaur</option>
 				<option value="jednorożec">Jednorożec</option>
-
+				<option value="wróżka">Wróżka</option>
+				<option value="jednooki olbrzym">Jednooki Olbrzym</option>
+				<option value="anioł">Anioł</option>
+				<option value="demon">Demon</option>
 				@*Tu dodajmy więcej ras*@
 			</select>
 			<span asp-validation-for="Race" class="text-danger"></span>
@@ -72,9 +75,9 @@
 			<span asp-validation-for="Mana" class="text-danger"></span>
 		</div>
 		<div class="mb-3 row p-1">
-			<label asp-for="Male" class="p-0"></label>
-			<input asp-for="Male" class="form-control" />
-			<span asp-validation-for="Male" class="text-danger"></span>
+			<label asp-for="Gender" class="p-0"></label>
+			<input asp-for="Gender" class="form-control" />
+			<span asp-validation-for="Gender" class="text-danger"></span>
 		</div>@*Tu można też dać wybór pomiędzy Mężczyzna,kobieta,inne = wpisz*@
 		<div class="mb-3 row p-1">
 			<label asp-for="Weapon" class="p-0"></label>

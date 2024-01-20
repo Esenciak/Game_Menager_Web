@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game_Menager_Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240119175428_AddCategoryTableToDbHero")]
+    [Migration("20240120082318_AddCategoryTableToDbHero")]
     partial class AddCategoryTableToDbHero
     {
         /// <inheritdoc />
@@ -49,7 +49,7 @@ namespace Game_Menager_Web.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Game_Menager_Web.Models.Hero", b =>
+            modelBuilder.Entity("Game_Menager_Web.Models.Heroes", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -70,13 +70,14 @@ namespace Game_Menager_Web.Migrations
                     b.Property<int>("Dexterity")
                         .HasColumnType("int");
 
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Gold")
                         .HasColumnType("int");
 
                     b.Property<int>("HP")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Male")
                         .HasColumnType("int");
 
                     b.Property<int>("Mana")
@@ -84,19 +85,23 @@ namespace Game_Menager_Web.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Race")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("Skill")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.Property<string>("SkillDescription")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("SkillRank")
                         .HasColumnType("int");
@@ -109,7 +114,8 @@ namespace Game_Menager_Web.Migrations
 
                     b.Property<string>("Weapon")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
@@ -120,12 +126,12 @@ namespace Game_Menager_Web.Migrations
                         {
                             Id = 1,
                             Age = 1200,
-                            CreatedDateTime = new DateTime(2024, 1, 19, 18, 54, 28, 98, DateTimeKind.Local).AddTicks(8225),
+                            CreatedDateTime = new DateTime(2024, 1, 20, 9, 23, 16, 824, DateTimeKind.Local).AddTicks(7527),
                             Description = "elf pochodzący ze szczepu Sindarów. W Trzeciej Erze był członkiem Drużyny Pierścienia.",
                             Dexterity = 100,
+                            Gender = "Male",
                             Gold = 20,
                             HP = 70,
-                            Male = 0,
                             Mana = 20,
                             Name = "Legolas",
                             Race = "Elf",
