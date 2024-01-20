@@ -5,7 +5,10 @@ namespace Game_Menager_Web.Models
 {
     public class Heroes
     {
-        [Key]
+		private DateTime _createdDateTime;
+
+
+		[Key]
         public int Id { get; set; }
         [Required(ErrorMessage ="Nazwa nie może być pusta")]
 		[MaxLength(30)]
@@ -62,6 +65,10 @@ namespace Game_Menager_Web.Models
 		[DisplayName("Opis Głównej umiejętności")]
 		public string SkillDescription { get; set; }
 
-		public DateTime CreatedDateTime { get; set; } = DateTime.Now;
+		public DateTime CreatedDateTime
+		{
+			get { return DateTime.Now; }
+			set { _createdDateTime = value; }
+		}
     }
 }

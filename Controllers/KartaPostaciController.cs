@@ -80,12 +80,12 @@ namespace Game_Menager_Web.Controllers
 			{
 				return NotFound();
 			}
-			Heroes heroesFromDb = _db.Heroes.Find(Heroesid);
-			if (heroesFromDb == null)
+			Heroes obj = _db.Heroes.Find(Heroesid);
+			if (obj == null)
 			{
 				return NotFound();
 			}
-			return View(heroesFromDb);
+			return View(obj);
 		}
 
 
