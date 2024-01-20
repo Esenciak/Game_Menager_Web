@@ -64,11 +64,8 @@ namespace Game_Menager_Web.Models
 		[MaxLength(1000)]
 		[DisplayName("Opis Głównej umiejętności")]
 		public string SkillDescription { get; set; }
-        [Required]
-        [MaxLength(1000)]
-		[DisplayName("Level")]
-		public int Level { get; set; }
-        public DateTime CreatedDateTime
+
+		public DateTime CreatedDateTime
 		{
 			get { return DateTime.Now; }
 			set { _createdDateTime = value; }

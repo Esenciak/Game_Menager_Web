@@ -53,10 +53,6 @@ namespace Game_Menager_Web.Migrations
                     b.Property<int>("HP")
                         .HasColumnType("int");
 
-                    b.Property<int>("Level")
-                        .HasMaxLength(1000)
-                        .HasColumnType("int");
-
                     b.Property<int>("Mana")
                         .HasColumnType("int");
 
@@ -109,7 +105,6 @@ namespace Game_Menager_Web.Migrations
                             Gender = "Male",
                             Gold = 20,
                             HP = 70,
-                            Level = 0,
                             Mana = 20,
                             Name = "Legolas",
                             Race = "Elf",

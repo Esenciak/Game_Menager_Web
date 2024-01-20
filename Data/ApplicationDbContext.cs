@@ -21,10 +21,7 @@ namespace Game_Menager_Web.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Heroes>().HasData(
-                new Heroes
-                {
-                    Id = 1,
-                    Name = "Legolas",
+                new Heroes { Id = 1, Name = "Legolas",
                     Description = "elf pochodzący ze szczepu Sindarów. W Trzeciej Erze był członkiem Drużyny Pierścienia.",
                     Age = 1200,
                     Race = "Elf",
@@ -38,8 +35,7 @@ namespace Game_Menager_Web.Data
                     Weapon = "Bow",
                     Skill = "Ciche kroki",
                     SkillRank = 5,
-                    SkillDescription = "Postać porusza się bezszelestnie",
-                    Level = 12
+                    SkillDescription = "Postać porusza się bezszelestnie"
                 }
                 );
         }
