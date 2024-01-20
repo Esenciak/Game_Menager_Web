@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karta Postaci</title>
+    <script>
+        function printPage() {
+            window.print();
+        }
+    </script>
     <style>
         body {
             background-color: #1c1c1c;
@@ -181,6 +186,7 @@
             <div class="chat-section section">
                 <textarea placeholder="Chat do pisania" rows="8"></textarea>
                 <button class="button">Wyślij</button>
+                <button class="button" onclick="printPage()">Drukuj</button>
             </div>
             <!-- Sekcja Ekwipunku -->
             <div class="equipment-section section">
