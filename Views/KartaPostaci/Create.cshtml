@@ -76,9 +76,14 @@
 		</div>
 		<div class="mb-3 row p-1">
 			<label asp-for="Gender" class="p-0"></label>
-			<input asp-for="Gender" class="form-control" />
+			<select asp-for="Gender" class="form-control">
+				<option value="Mężczyzna">Mężczyzna</option>
+				<option value="Kobieta">Kobieta</option>
+				<option value="Inne">Inne</option>
+			</select>
 			<span asp-validation-for="Gender" class="text-danger"></span>
-		</div>@*Tu można też dać wybór pomiędzy Mężczyzna,kobieta,inne = wpisz*@
+		</div>
+		@*Tu można też dać wybór pomiędzy Mężczyzna,kobieta,inne = wpisz*@
 		<div class="mb-3 row p-1">
 			<label asp-for="Weapon" class="p-0"></label>
 			<input asp-for="Weapon" class="form-control" />
@@ -118,6 +123,6 @@
 @section Scripts {
 	@{
 		<partial name="_ValidationScriptsPartial" />
-	}
 
+	}
 }
