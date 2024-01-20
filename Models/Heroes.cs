@@ -61,7 +61,7 @@ namespace Game_Menager_Web.Models
 		[DisplayName("Poziom Głównej Umiejętności")]
 		public int SkillRank { get; set; }
 		[Required]
-		[MaxLength(500)]
+		[MaxLength(1000)]
 		[DisplayName("Opis Głównej umiejętności")]
 		public string SkillDescription { get; set; }
 
