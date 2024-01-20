@@ -37,8 +37,17 @@ namespace Game_Menager_Web.Data
                     Gender = "Male",
                     Weapon = "Bow",
                     Skill = "Ciche kroki",
+                    Skill2 = "Szybkie strzelanie",
+                    Skill3 = "Wysoki skok",
+                    Skill4 = "Sokole oko",
                     SkillRank = 5,
+                    SkillRank2 = 5,
+                    SkillRank3 = 5,
+                    SkillRank4 = 5,
                     SkillDescription = "Postać porusza się bezszelestnie",
+                    SkillDescription2 = "Postać Wystrzeliwuje serię strzał",
+                    SkillDescription3 = "Postać skaczę wysoko",
+                    SkillDescription4 = "Postać widzi na znaczną odległość",
                     Level = 12
                 }
                 );

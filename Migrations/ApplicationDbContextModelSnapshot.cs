@@ -72,12 +72,48 @@ namespace Game_Menager_Web.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Skill2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Skill3")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Skill4")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SkillDescription")
                         .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
+                    b.Property<string>("SkillDescription2")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("SkillDescription3")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("SkillDescription4")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
                     b.Property<int>("SkillRank")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SkillRank2")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SkillRank3")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SkillRank4")
                         .HasColumnType("int");
 
                     b.Property<int>("Speed")
@@ -110,8 +146,17 @@ namespace Game_Menager_Web.Migrations
                             Name = "Legolas",
                             Race = "Elf",
                             Skill = "Ciche kroki",
+                            Skill2 = "Szybkie strzelanie",
+                            Skill3 = "Wysoki skok",
+                            Skill4 = "Sokole oko",
                             SkillDescription = "Postać porusza się bezszelestnie",
+                            SkillDescription2 = "Postać Wystrzeliwuje serię strzał",
+                            SkillDescription3 = "Postać skaczę wysoko",
+                            SkillDescription4 = "Postać widzi na znaczną odległość",
                             SkillRank = 5,
+                            SkillRank2 = 5,
+                            SkillRank3 = 5,
+                            SkillRank4 = 5,
                             Speed = 120,
                             Strenght = 40,
                             Weapon = "Bow"
