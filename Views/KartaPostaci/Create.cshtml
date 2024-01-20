@@ -23,7 +23,12 @@
 		</div>
 		<div class="mb-3 row p-1">
 			<label asp-for="Race" class="p-0"></label>
-			<input asp-for="Race" class="form-control" />
+			<select asp-for="Race" class="form-control">
+				<option value="ork">Ork</option>
+				<option value="człowiek">Człowiek</option>
+				<option value="elf">Elf</option>
+				@*Tu dodajmy więcej ras*@
+			</select>
 			<span asp-validation-for="Race" class="text-danger"></span>
 		</div>@*Tu można dać wybór rasy żeby było więcej funkcjonalności*@
 		<div class="mb-3 row p-1">
