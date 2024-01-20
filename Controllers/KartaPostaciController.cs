@@ -41,6 +41,8 @@ namespace Game_Menager_Web.Controllers
 			}
 			return View();
 		}
+
+		//edycja
 		public IActionResult Edit(int? Heroesid)
 		{
 			if(Heroesid == null || Heroesid == 0)
@@ -70,6 +72,36 @@ namespace Game_Menager_Web.Controllers
 			return View();
 		}
 
+
+		// usuwanie
+		public IActionResult Delete(int? Heroesid)
+		{
+			if (Heroesid == null || Heroesid == 0)
+			{
+				return NotFound();
+			}
+			Heroes heroesFromDb = _db.Heroes.Find(Heroesid);
+			if (heroesFromDb == null)
+			{
+				return NotFound();
+			}
+			return View(heroesFromDb);
+		}
+
+
+		[HttpPost, ActionName("Delete")]
+		public IActionResult DeletePOST(int? Heroesid)
+		{
+			Heroes obj = _db.Heroes.Find(Heroesid);
+			if (obj == null) 
+			{
+				return NotFound();
+			}
+			_db.Heroes.Remove(obj);
+			_db.SaveChanges(); // zapisujemy zmiany w bazie 
+			return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
+
+		}
 
 
 	}
