@@ -43,3 +43,6 @@
 		ponieważ używamy tagów w asp .net i musimy pokazać nazwę metody która ma być w post
 
 		<div asp-validation-summary="All"></div> wypisuje listę co musi być np hasło od 8 znaków itd
+
+
+		W Index kartypostaci musimy zrobić tak że admin może edytować postaci a gracz otwierać kartę na cały ekran
