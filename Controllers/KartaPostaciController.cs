@@ -41,13 +41,13 @@ namespace Game_Menager_Web.Controllers
 			}
 			return View();
 		}
-		public IActionResult Edit(int? id)
+		public IActionResult Edit(int? Heroesid)
 		{
-			if(id==null || id==0)
+			if(Heroesid == null || Heroesid == 0)
 			{
 				return NotFound();
 			}
-			Heroes heroesFromDb = _db.Heroes.Find(id);
+			Heroes heroesFromDb = _db.Heroes.Find(Heroesid);
 			//Heroes heroesFromDb2 = _db.Heroes.FirstOrDefault(u=>u.Id==id); inne werjse wyszukiwania id do edycji
 			//Heroes heroesFromDb3 = _db.Heroes.Where(u=>u.Id==id).FirstOrDefault();
 			if (heroesFromDb == null)

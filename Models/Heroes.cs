@@ -10,7 +10,7 @@ namespace Game_Menager_Web.Models
         [Required(ErrorMessage ="Nazwa nie może być pusta")]
 		[MaxLength(30)]
 		[DisplayName("Imie")]
-		public string Name { get; set; }
+		public string Name { get; set; } = string.Empty;
 		[Required]
 		[DisplayName("Opis")]
 		public string Description { get; set; } = "test";
