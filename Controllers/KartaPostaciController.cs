@@ -37,6 +37,7 @@ namespace Game_Menager_Web.Controllers
 			{
 				_db.Heroes.Add(obj); // dodaje do tabeli
 				_db.SaveChanges(); // zapisujemy zmiany w bazie 
+				TempData["success"] = "Udało się stworzyć postać";
 				return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 			}
 			return View();
@@ -67,6 +68,7 @@ namespace Game_Menager_Web.Controllers
 			{
 				_db.Heroes.Update(obj); // dodaje do tabeli
 				_db.SaveChanges(); // zapisujemy zmiany w bazie 
+				TempData["success"] = "Udało się edytować postać";
 				return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 			}
 			return View();
@@ -99,6 +101,7 @@ namespace Game_Menager_Web.Controllers
 			}
 			_db.Heroes.Remove(obj);
 			_db.SaveChanges(); // zapisujemy zmiany w bazie 
+			TempData["success"] = "Udało się usunąć postać";
 			return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 
 		}
