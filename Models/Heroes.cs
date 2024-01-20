@@ -22,7 +22,6 @@ namespace Game_Menager_Web.Models
 		[DisplayName("Wiek")]
 		public int Age { get; set; }
 		[Required]
-		[MaxLength(30)]
 		[DisplayName("Rasa")]
 		public string Race { get; set; }
 		[Required]
@@ -50,11 +49,9 @@ namespace Game_Menager_Web.Models
 		[DisplayName("Płeć")]
 		public string Gender { get; set; }
 		[Required]
-		[MaxLength(30)]
 		[DisplayName("Broń")]
 		public string Weapon { get; set; }
 		[Required]
-		[MaxLength(40)]
 		[DisplayName("Umiejętność Główna")]
 		public string Skill { get; set; }
 		[Required]
@@ -65,8 +62,8 @@ namespace Game_Menager_Web.Models
 		[DisplayName("Opis Głównej umiejętności")]
 		public string SkillDescription { get; set; }
         [Required]
-        [MaxLength(1000)]
-		[DisplayName("Level")]
+        [Range(1, 10000, ErrorMessage = "Numer musi być pomiędzy 1-10000")]
+        [DisplayName("Level")]
 		public int Level { get; set; }
         public DateTime CreatedDateTime
 		{
