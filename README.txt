@@ -5,7 +5,7 @@
 
 	Migracja sql, stworzenie bazy
 
-	odc 44
+	odc 49
 
 	użyj update-database w konsoli 
 
