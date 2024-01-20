@@ -107,9 +107,10 @@ namespace Game_Menager_Web.Controllers
 		}
 
 
-		public IActionResult KartaPos(List<Heroes> Heroesid)
+		public IActionResult KartaPos()
 		{
-			return View(Heroesid);
+			Heroes hero = _db.Heroes.FirstOrDefault();
+			return View(hero);
 		}
 
 
@@ -118,11 +119,13 @@ namespace Game_Menager_Web.Controllers
 		{
 			if (ModelState.IsValid)
 			{
+				_db.Heroes.Update(obj); // dodaje do tabeli
+				_db.SaveChanges(); // zapisujemy zmiany w bazie 
+				TempData["success"] = "Udało się edytować postać";
 				return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 			}
-			return View(obj);
+			return View();
 		}
-
 
 
 
