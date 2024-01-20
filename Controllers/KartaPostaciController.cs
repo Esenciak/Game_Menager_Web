@@ -107,5 +107,11 @@ namespace Game_Menager_Web.Controllers
 		}
 
 
+		public IActionResult KartaPos()
+		{
+			return View();
+		}
+
+
 	}
 }
