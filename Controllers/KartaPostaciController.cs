@@ -119,6 +119,7 @@ namespace Game_Menager_Web.Controllers
 			{
 				return NotFound();
 			}
+			TempData["success"] = "Udało się załadować postać";
 			return View(obj2);
 
 
