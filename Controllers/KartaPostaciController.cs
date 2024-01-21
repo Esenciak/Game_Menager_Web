@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Game_Menager_Web.Controllers
 {
-    public class KartaPostaciController : Controller
-    {
+	public class KartaPostaciController : Controller
+	{
 
 		private readonly ApplicationDbContext _db;
 		public KartaPostaciController(ApplicationDbContext db)
@@ -46,7 +46,7 @@ namespace Game_Menager_Web.Controllers
 		//edycja
 		public IActionResult Edit(int? Heroesid)
 		{
-			if(Heroesid == null || Heroesid == 0)
+			if (Heroesid == null || Heroesid == 0)
 			{
 				return NotFound();
 			}
@@ -95,7 +95,7 @@ namespace Game_Menager_Web.Controllers
 		public IActionResult DeletePOST(int? id)
 		{
 			Heroes? obj = _db.Heroes.Find(id);
-			if (obj == null) 
+			if (obj == null)
 			{
 				return NotFound();
 			}
@@ -107,28 +107,22 @@ namespace Game_Menager_Web.Controllers
 		}
 
 
-		public IActionResult KartaPos()
+		public IActionResult KartaPos(int? Heroesid)
 		{
-			Heroes hero = _db.Heroes.FirstOrDefault();
-			return View(hero);
+			Heroes? obj = _db.Heroes.Find(Heroesid);
+			if (obj == null)
+			{
+				return NotFound();
+			}
+			Heroes obj2 = _db.Heroes.Find(Heroesid);
+			if (obj == null)
+			{
+				return NotFound();
+			}
+			return View(obj2);
+
+
+
 		}
-
-
-		//[HttpPost]
-		//public IActionResult Karta(Heroes obj)
-		//{
-		//	if (ModelState.IsValid)
-		//	{
-		//		_db.Heroes.Update(obj); // dodaje do tabeli
-		//		_db.SaveChanges(); // zapisujemy zmiany w bazie 
-		//		TempData["success"] = "Udało się edytować postać";
-		//		return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
-		//	}
-		//	return View();
-		//}
-
-
-
-
 	}
 }
