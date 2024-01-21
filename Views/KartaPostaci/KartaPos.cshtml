@@ -125,11 +125,11 @@
             width: 95%;
         }
 
-        input[type="text"] {
+        label[type="text"] {
             padding: 5px;
         }
 
-        input::placeholder, textarea::placeholder {
+        label::placeholder, textarea::placeholder {
             color: #b8b8b8;
         }
 
@@ -165,16 +165,16 @@
             </div>
             <!-- Sekcja Opisu -->
             <div class="description-section section">
-                <textarea placeholder="Opis Postaci" asp-for="Description" rows="4"></textarea>
+                <textarea disabled placeholder="Opis Postaci" asp-for="Description" rows="4"></textarea>
             </div>
             <!-- Sekcja statystyk -->
             <div class="stats-section section">
-                <input type="text" placeholder="@Model.Level">
-                <input type="text" placeholder="@Model.HP">
-                <input type="text" placeholder="@Model.Speed">
-                <input type="text" placeholder="@Model.Gold">
-                <input type="text" placeholder="@Model.Mana">
-                <input type="text" placeholder="@Model.Dexterity">
+            <label type="text" disabled placeholder="@Model.Level">
+            <label type="text" disabled placeholder="@Model.HP">
+            <label type="text" disabled placeholder="@Model.Speed">
+            <label type="text" disabled placeholder="@Model.Gold">
+            <label type="text" disabled placeholder="@Model.Mana">
+            <label type="text" disabled placeholder="@Model.Dexterity">
             </div>
             <!-- Sekcja Zdjecia -->
             <div class="photo-section section">
@@ -190,11 +190,11 @@
             </div>
             <!-- Sekcja Ekwipunku -->
             <div class="equipment-section section">
-                <input type="text" placeholder="Przedmiot 1">
-                <input type="text" placeholder="Przedmiot 2">
-                <input type="text" placeholder="Przedmiot 3">
-                <input type="text" placeholder="Przedmiot 4">
-                <input type="text" placeholder="Przedmiot 5">
+                <input type="text" disabled placeholder="Przedmiot 1">
+                <input type="text" disabled placeholder="Przedmiot 2">
+                <input type="text" disabled placeholder="Przedmiot 3">
+                <input type="text" disabled placeholder="Przedmiot 4">
+                <input type="text" disabled placeholder="Przedmiot 5">
             </div>
         </div>
     </form>
