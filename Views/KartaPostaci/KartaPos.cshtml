@@ -10,6 +10,11 @@
         function printPage() {
             window.print();
         }
+        $(document).ready(function () {
+            $('[data-bs-toggle="popover"]').popover();
+        });
+
+
     </script>
     <style>
         body {
@@ -160,6 +165,23 @@
             grid-area: description;
         }
 
+        .btn-secondary {
+            --bs-btn-color: #0a0a0a;
+            --bs-btn-bg: #0a0a0a;
+            --bs-btn-border-color: #424242;
+            --bs-btn-hover-color: #0a0a0a;
+            --bs-btn-hover-bg: grey;
+            --bs-btn-hover-border-color: grey;
+            --bs-btn-focus-shadow-rgb: 217, 217, 217;
+            --bs-btn-active-color: #0a0a0a;
+            --bs-btn-active-bg: grey;
+            --bs-btn-active-border-color: grey;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #0a0a0a;
+            --bs-btn-disabled-bg: #0a0a0a;
+            --bs-btn-disabled-border-color: #0a0a0a;
+        }
+
     </style>
 </head>
 <body>
@@ -202,10 +224,10 @@
             </div>
             <!-- Sekcjia speli -->
               <div class="spells-section section">
-                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-bs-original-title="Popover Title">Zaklecie 1</button>
-                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-bs-original-title="Popover Title">Zaklecie 2</button>
-                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-bs-original-title="Popover Title">Zaklecie 3</button>
-                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-bs-original-title="Popover Title">Zaklecie 4</button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="@Model.SkillDescription" data-bs-original-title="@Model.Skill">Zaklecie 1</button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="@Model.SkillDescription2" data-bs-original-title="@Model.Skill2">Zaklecie 2</button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="@Model.SkillDescription3" data-bs-original-title="@Model.Skill3">Zaklecie 3</button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="@Model.SkillDescription4" data-bs-original-title="@Model.Skill4">Zaklecie 4</button>
               </div>
             <!-- Sekcja Zdjecia -->
             <div class="photo-section section">
