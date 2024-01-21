@@ -125,11 +125,11 @@
             width: 95%;
         }
 
-        label[type="text"] {
+        input[type="text"] {
             padding: 5px;
         }
 
-        label::placeholder, textarea::placeholder {
+        input::placeholder, textarea::placeholder {
             color: #b8b8b8;
         }
 
@@ -169,12 +169,19 @@
             </div>
             <!-- Sekcja statystyk -->
             <div class="stats-section section">
-            <label type="text" disabled placeholder="@Model.Level">
-            <label type="text" disabled placeholder="@Model.HP">
-            <label type="text" disabled placeholder="@Model.Speed">
-            <label type="text" disabled placeholder="@Model.Gold">
-            <label type="text" disabled placeholder="@Model.Mana">
-            <label type="text" disabled placeholder="@Model.Dexterity">
+                <div class="info-row"></div>
+                <div><strong>Level: </strong></div>
+                <input type="text" disabled placeholder="@Model.Level">
+                <div><strong>HP: </strong></div>
+                <input type="text" disabled placeholder="@Model.HP">
+                <div><strong>Speed: </strong></div>
+                <input type="text" disabled placeholder="@Model.Speed">
+                <div><strong>Gold: </strong></div>
+                <input type="text" disabled placeholder="@Model.Gold">
+                <div><strong>Mana: </strong></div>
+                <input type="text" disabled placeholder="@Model.Mana">
+                <div><strong>Dexterity: </strong></div>
+                <input type="text" disabled placeholder="@Model.Dexterity">
             </div>
             <!-- Sekcja Zdjecia -->
             <div class="photo-section section">
