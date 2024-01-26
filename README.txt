@@ -7,7 +7,7 @@
 
 	odc 65
 
-	użyj update-database w konsoli
+	użyj update-database w konsoli 
 
 	Komendy SQL:
 	Remove-Migration - usuwa migracje

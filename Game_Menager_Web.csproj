@@ -7,13 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Nowy folder1\**" />
     <Compile Remove="Nowy folder\**" />
-    <Content Remove="Nowy folder1\**" />
     <Content Remove="Nowy folder\**" />
-    <EmbeddedResource Remove="Nowy folder1\**" />
     <EmbeddedResource Remove="Nowy folder\**" />
-    <None Remove="Nowy folder1\**" />
     <None Remove="Nowy folder\**" />
   </ItemGroup>
 
@@ -26,6 +22,10 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Nowy folder1\" />
   </ItemGroup>
 
 </Project>
