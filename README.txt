@@ -48,5 +48,3 @@
 		W Index kartypostaci musimy zrobić tak że admin może edytować postaci a gracz otwierać kartę na cały ekran
 
 		W sql dodać level
-
-		test
