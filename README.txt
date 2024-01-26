@@ -49,4 +49,4 @@
 
 		W sql dodać level
 
-		test  siema
+		test
