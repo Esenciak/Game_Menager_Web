@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game_Menager_Web.Repository.IRepository
 {
-    public interface ICategoryRepository : IRepository<Heroes> //na co mamy zamienione "Category"?
+    public interface IHeroesRepository : IRepository<Heroes> //na co mamy zamienione "Category"?
     {
         void Update(Heroes obj);
         void Save();
