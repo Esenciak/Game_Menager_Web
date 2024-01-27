@@ -11,7 +11,7 @@ namespace Game_Menager_Web.Repository.IRepository
     {
         //T - Kategoria
         IEnumerable<T> GetAll();
-        T Get(Expression<Func<T, bool>> filter);
+        T Get(Expression<Func<T, bool>> filter);    // link operator
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entity);

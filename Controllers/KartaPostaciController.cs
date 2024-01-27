@@ -1,5 +1,6 @@
 ﻿using Game_Menager_Web.Data;
 using Game_Menager_Web.Models;
+using Game_Menager_Web.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Game_Menager_Web.Controllers
@@ -7,16 +8,16 @@ namespace Game_Menager_Web.Controllers
 	public class KartaPostaciController : Controller
 	{
 
-		private readonly ApplicationDbContext _db;
-		public KartaPostaciController(ApplicationDbContext db)
+		private readonly IHeroesRepository _HeroesRepo;
+		public KartaPostaciController(IHeroesRepository db)
 		{
-			_db = db;
+			_HeroesRepo = db;
 		}
 
 		public IActionResult Index()
 		{
 			// dodaje naszą liste do strony
-			List<Heroes> objHeroesList = _db.Heroes.ToList();
+			List<Heroes> objHeroesList = _HeroesRepo.GetAll().ToList();
 			// przekierowuje na stronę do logowania
 			return View(objHeroesList);
 		}
@@ -35,8 +36,8 @@ namespace Game_Menager_Web.Controllers
 			}
 			if (ModelState.IsValid)
 			{
-				_db.Heroes.Add(obj); // dodaje do tabeli
-				_db.SaveChanges(); // zapisujemy zmiany w bazie 
+				_HeroesRepo.Add(obj); // dodaje do tabeli
+				_HeroesRepo.Save(); // zapisujemy zmiany w bazie 
 				TempData["success"] = "Udało się stworzyć postać";
 				return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 			}
@@ -50,7 +51,7 @@ namespace Game_Menager_Web.Controllers
 			{
 				return NotFound();
 			}
-			Heroes heroesFromDb = _db.Heroes.Find(Heroesid);
+			Heroes? heroesFromDb = _HeroesRepo.Get(u => u.Id == Heroesid);
 			//Heroes heroesFromDb2 = _db.Heroes.FirstOrDefault(u=>u.Id==id); inne werjse wyszukiwania id do edycji
 			//Heroes heroesFromDb3 = _db.Heroes.Where(u=>u.Id==id).FirstOrDefault();
 			if (heroesFromDb == null)
@@ -66,8 +67,8 @@ namespace Game_Menager_Web.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				_db.Heroes.Update(obj); // dodaje do tabeli
-				_db.SaveChanges(); // zapisujemy zmiany w bazie 
+				_HeroesRepo.Update(obj); // dodaje do tabeli
+				_HeroesRepo.Save(); // zapisujemy zmiany w bazie 
 				TempData["success"] = "Udało się edytować postać";
 				return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 			}
@@ -82,7 +83,7 @@ namespace Game_Menager_Web.Controllers
 			{
 				return NotFound();
 			}
-			Heroes obj = _db.Heroes.Find(Heroesid);
+			Heroes? obj = _HeroesRepo.Get(u => u.Id == Heroesid);
 			if (obj == null)
 			{
 				return NotFound();
@@ -94,13 +95,13 @@ namespace Game_Menager_Web.Controllers
 		[HttpPost, ActionName("Delete")]
 		public IActionResult DeletePOST(int? id)
 		{
-			Heroes? obj = _db.Heroes.Find(id);
+			Heroes? obj = _HeroesRepo.Get(u => u.Id == id);
 			if (obj == null)
 			{
 				return NotFound();
 			}
-			_db.Heroes.Remove(obj);
-			_db.SaveChanges(); // zapisujemy zmiany w bazie 
+			_HeroesRepo.Remove(obj);
+			_HeroesRepo.Save(); // zapisujemy zmiany w bazie 
 			TempData["success"] = "Udało się usunąć postać";
 			return RedirectToAction("Index"); // przekierwoujemy się z powrotem na index
 
@@ -109,12 +110,12 @@ namespace Game_Menager_Web.Controllers
 
 		public IActionResult KartaPos(int? Heroesid)
 		{
-			Heroes? obj = _db.Heroes.Find(Heroesid);
+			Heroes? obj = _HeroesRepo.Get(u => u.Id == Heroesid);
 			if (obj == null)
 			{
 				return NotFound();
 			}
-			Heroes obj2 = _db.Heroes.Find(Heroesid);
+			Heroes obj2 = _HeroesRepo.Get(u => u.Id == Heroesid);
 			if (obj == null)
 			{
 				return NotFound();

@@ -1,4 +1,5 @@
 using Game_Menager_Web.Data;
+using Game_Menager_Web.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace Game_Menager_Web
@@ -15,6 +16,7 @@ namespace Game_Menager_Web
 			builder.Services.AddDbContext<ApplicationDbContext>(options=> 
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
 
+			builder.Services.AddScoped<IHeroesRepository, HeroesRepository>();
 
 
 			var app = builder.Build();
