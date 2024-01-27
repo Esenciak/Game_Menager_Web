@@ -13,9 +13,9 @@ namespace Game_Menager_Web.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly AddlicationDbContext _db; //nwm dlaczego nie wyszukuje mi 
+        private readonly ApplicationDbContext _db; //nwm dlaczego nie wyszukuje mi 
         internal DbSet<T> dbSet;
-        public Repository(AddlicationDbContext db)
+        public Repository(ApplicationDbContext db)
         {
             _db=db;
             this.dbSet = _db.Set<T>();

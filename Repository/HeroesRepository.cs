@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Game_Menager_Web.Repository
 {
-    public class CategoryRepository : ICaegoryRepository
+    public class HeroesRepository : IHeroesRepository
     {
     }
 }
