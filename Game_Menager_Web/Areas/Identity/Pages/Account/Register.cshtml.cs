@@ -155,11 +155,11 @@ namespace Game_Menager_Web.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private ApplicationUser CreateUser()
+        private IdentityUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<ApplicationUser>(); // zmieniłem na application user
+                return Activator.CreateInstance<IdentityUser>(); // zmieniłem na application user
             }
             catch
             {

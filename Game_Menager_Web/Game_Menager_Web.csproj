@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Identity\Data\**" />
     <Compile Remove="Nowy folder1\**" />
+    <Content Remove="Areas\Identity\Data\**" />
     <Content Remove="Nowy folder1\**" />
+    <EmbeddedResource Remove="Areas\Identity\Data\**" />
     <EmbeddedResource Remove="Nowy folder1\**" />
+    <None Remove="Areas\Identity\Data\**" />
     <None Remove="Nowy folder1\**" />
   </ItemGroup>
 
@@ -29,10 +33,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Game_Menager.DataAccess\Game_Menager.DataAccess.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Identity\Data\" />
   </ItemGroup>
 
 </Project>
