@@ -77,44 +77,44 @@ namespace Game_Menager.Models
         [DisplayName("Opis Głównej umiejętności")]
         public string SkillDescription { get; set; }
 
-        
+        [Required]
         [DisplayName("Umiejętność 2")]
-        public string? Skill2 { get; set; }
+        public string Skill2 { get; set; }
 
-        
+        [Required]
         [DisplayName("Poziom Umiejętności 2")]
-        public int? SkillRank2 { get; set; }
+        public int SkillRank2 { get; set; }
 
-        
+        [Required]
         [MaxLength(1000)]
         [DisplayName("Opis Umiejętności 2")]
-        public string? SkillDescription2 { get; set; }
+        public string SkillDescription2 { get; set; }
 
-        
+        [Required]
         [DisplayName("Umiejętność 3")]
-        public string? Skill3 { get; set; }
+        public string Skill3 { get; set; }
 
-        
+        [Required]
         [DisplayName("Poziom Umiejętności 3")]
-        public int? SkillRank3 { get; set; }
+        public int SkillRank3 { get; set; }
 
-   
+        [Required]
         [MaxLength(1000)]
         [DisplayName("Opis Umiejętności 3")]
-        public string? SkillDescription3 { get; set; }
+        public string SkillDescription3 { get; set; }
 
-        
+        [Required]
         [DisplayName("Umiejętność 4")]
-        public string? Skill4 { get; set; }
+        public string Skill4 { get; set; }
 
-        
+        [Required]
         [DisplayName("Poziom Umiejętności 4")]
-        public int? SkillRank4 { get; set; }
+        public int SkillRank4 { get; set; }
 
-        
+        [Required]
         [MaxLength(1000)]
         [DisplayName("Opis Umiejętności 4")]
-        public string? SkillDescription4 { get; set; }
+        public string SkillDescription4 { get; set; }
 
         [Required]
         [Range(1, 10000, ErrorMessage = "Numer musi być pomiędzy 1-10000")]
@@ -128,7 +128,7 @@ namespace Game_Menager.Models
         }
 
         //[Required] dodać po zrobieniu logowania
-        //[DisplayName("User:  ")]
-        public string? User { get; set; }
+        [DisplayName("User:  ")]
+        public string User { get; set; }
     }
 }

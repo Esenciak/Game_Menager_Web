@@ -22,11 +22,20 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Loggin" asp-action="Index">Logowanie</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-light" asp-area="Gracz" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="Gracz" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+<<<<<<< HEAD
+=======
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="KartaPostaci" asp-action="Index">Postaci</a>
+                        </li>
+>>>>>>> parent of e8a12fd (Dodaje tworzenie konta)
                       @*   <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Content Managment
@@ -39,7 +48,6 @@
                             </ul>
                         </li> *@
                     </ul>
-                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
