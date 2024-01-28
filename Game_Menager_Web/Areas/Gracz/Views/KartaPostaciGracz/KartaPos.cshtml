@@ -1,0 +1,257 @@
+﻿@model Heroes
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karta Postaci</title>
+    <script>
+        function printPage() {
+            window.print();
+        }
+        $(document).ready(function () {
+            $('[data-bs-toggle="popover"]').popover();
+        });
+
+
+    </script>
+    <style>
+        body {
+            background-color: #1c1c1c;
+            color: #f8f8f8;
+            font-family: 'Garamond', serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: unset !important;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+            'login photo'
+            'character photo'
+            'description spells'
+            'stats equipment'
+            'chat equipment';
+            grid-template-columns: 75%;
+            grid-template-rows: auto auto auto 1fr;
+            gap: 20px;
+            max-width: 1300px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: rgba(28, 28, 28, 0.9);
+            border: 1px solid #4a4a4a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .login-section {
+            grid-area: login;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-height: 50px;
+        }
+
+        .character-section {
+            grid-area: character;
+            display: grid;
+            max-height: 70px;
+        }
+
+        .stats-section {
+            grid-area: stats;
+            display: grid;
+            grid-template-rows: repeat(6, auto);
+            gap: 10px;
+        }
+
+        .chat-section {
+            grid-area: chat;
+        }
+
+        .spells-section {
+         grid-area: spells;
+         display: grid;
+         grid-template-rows: repeat(5, auto); /* Adjust the number of rows as needed for spells */
+         gap: 10px;
+       }
+
+       .spell-input {
+         background-color: #2a2a2a;
+         border: 1px solid #424242;
+         color: #f8f8f8;
+         padding: 10px;
+         border-radius: 4px;
+         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+       }
+
+        .photo-section {
+            grid-area: photo;
+            text-align: center;
+        }
+
+
+        .equipment-section {
+            grid-area: equipment;
+            display: grid;
+            grid-template-rows: repeat(6, auto);
+            gap: 10px;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 95%;
+            background-color: #333;
+            border: 1px solid #4a4a4a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: auto;
+            border-radius: 4px;
+        }
+
+        .button {
+            background-color: #3a3a3a;
+            color: #f8f8f8;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s;
+        }
+
+            .button:hover {
+                background-color: #505050;
+            }
+
+        textarea, input {
+            background-color: #2a2a2a;
+            border: 1px solid #424242;
+            color: #f8f8f8;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        textarea {
+            resize: none;
+            width: 95%;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #b8b8b8;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .description-section {
+            grid-area: description;
+        }
+
+        .btn-secondary {
+            --bs-btn-color: ##ced4da;
+            --bs-btn-bg: #454545;
+            --bs-btn-border-color: #424242;
+            --bs-btn-hover-color: #0a0a0a;
+            --bs-btn-hover-bg: grey;
+            --bs-btn-hover-border-color: grey;
+            --bs-btn-focus-shadow-rgb: 217, 217, 217;
+            --bs-btn-active-color: #0a0a0a;
+            --bs-btn-active-bg: grey;
+            --bs-btn-active-border-color: grey;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #454545;
+            --bs-btn-disabled-bg: #454545;
+            --bs-btn-disabled-border-color: #0a0a0a;
+        }
+
+    </style>
+</head>
+<body>
+    <form method="get" asp-action="KartaPos">
+        <input asp-for="Id" hidden />
+        <div class="container">
+            <!-- Sekcja Login Logout -->
+            <div class="login-section section">
+                <div style="font-size: 35px;">Login</div>
+                <div><strong><span>@Model</span></strong></div>
+                <button class="button">Logout</button>
+            </div>
+            <!-- Sekcja Gracza -->
+            <div class="character-section section">
+                <div class="info-row">
+                    <div><strong>Nazwa Postaci:</strong><p class="text-light">@Model.Name</p></div>
+                    <div><strong>Płeć:</strong> <span>@Model.Gender</span></div>
+                    <div><strong>Wiek:</strong> <span>@Model.Age</span></div>
+                    <div><strong>Rasa:</strong> <span>@Model.Race</span></div>
+                </div>
+            </div>
+            <!-- Sekcja Opisu -->
+            <div class="description-section section">
+                <textarea disabled placeholder="Opis Postaci" asp-for="Description" rows="4"></textarea>
+            </div>
+            <!-- Sekcja statystyk -->
+            <div class="stats-section section">
+                <div class="info-row"></div>
+                <div><strong>Level: </strong></div>
+                <input type="text" disabled placeholder="@Model.Level">
+                <div><strong>HP: </strong></div>
+                <input type="text" disabled placeholder="@Model.HP">
+                <div><strong>Speed: </strong></div>
+                <input type="text" disabled placeholder="@Model.Speed">
+                <div><strong>Gold: </strong></div>
+                <input type="text" disabled placeholder="@Model.Gold">
+                <div><strong>Mana: </strong></div>
+                <input type="text" disabled placeholder="@Model.Mana">
+                <div><strong>Dexterity: </strong></div>
+                <input type="text" disabled placeholder="@Model.Dexterity">
+            </div>
+            <!-- Sekcjia speli -->
+              <div class="spells-section section">
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="@Model.SkillDescription" data-bs-original-title="@Model.Skill">Zaklecie 1</button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="@Model.SkillDescription2" data-bs-original-title="@Model.Skill2">Zaklecie 2</button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="@Model.SkillDescription3" data-bs-original-title="@Model.Skill3">Zaklecie 3</button>
+                <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="@Model.SkillDescription4" data-bs-original-title="@Model.Skill4">Zaklecie 4</button>
+              </div>
+            <!-- Sekcja Zdjecia -->
+            <div class="photo-section section">
+                <div class="photo-placeholder">
+                    Miejsce na Zdjęcie
+                </div>
+            </div>
+            <!-- Sekcja chatu z Adminem -->
+            <div class="chat-section section">
+                <textarea placeholder="Chat do pisania" rows="8"></textarea>
+                <button class="button">Wyślij</button>
+                <button class="button" onclick="printPage()">Drukuj</button>
+            </div>
+            <!-- Sekcja Ekwipunku -->
+            <div class="equipment-section section">
+                <input type="text" disabled placeholder="Przedmiot 1">
+                <input type="text" disabled placeholder="Przedmiot 2">
+                <input type="text" disabled placeholder="Przedmiot 3">
+                <input type="text" disabled placeholder="Przedmiot 4">
+                <input type="text" disabled placeholder="Przedmiot 5">
+                <input type="text" disabled placeholder="Przedmiot 6">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
