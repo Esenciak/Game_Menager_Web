@@ -24,4 +24,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Game_Menager.DataAccess\Game_Menager.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

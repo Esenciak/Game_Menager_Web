@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Game_Menager_Web.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Game_Menager_Web.Data;
+using Game_Menager.DataAccess.Data;
 
 namespace Game_Menager_Web.Repository
 {

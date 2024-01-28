@@ -1,4 +1,4 @@
-﻿using Game_Menager_Web.Models;
+﻿using Game_Menager.Models;
 using Game_Menager_Web.Repository.IRepository;
 
 namespace Game_Menager_Web.Repository

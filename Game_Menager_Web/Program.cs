@@ -1,4 +1,4 @@
-using Game_Menager_Web.Data;
+using Game_Menager.DataAccess.Data;
 using Game_Menager_Web.Repository;
 using Microsoft.EntityFrameworkCore;
 

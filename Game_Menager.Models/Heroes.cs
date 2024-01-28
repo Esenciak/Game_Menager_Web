@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Game_Menager_Web.Models
+namespace Game_Menager.Models
 {
     public class Heroes
     {

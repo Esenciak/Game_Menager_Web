@@ -1,11 +1,10 @@
- using Game_Menager_Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc.Rendering;
+using Game_Menager.Models;
 
 namespace Game_Menager_Web.Controllers
 {
-	public class HomeController : Controller
+    public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
 

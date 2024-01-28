@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Game_Menager_Web.Migrations
+namespace Game_Menager.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddHeroTableToDb : Migration

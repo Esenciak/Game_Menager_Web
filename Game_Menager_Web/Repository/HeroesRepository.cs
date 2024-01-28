@@ -1,5 +1,5 @@
-﻿using Game_Menager_Web.Data;
-using Game_Menager_Web.Models;
+﻿using Game_Menager.DataAccess.Data;
+using Game_Menager.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

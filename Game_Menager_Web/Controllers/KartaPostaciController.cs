@@ -1,11 +1,10 @@
-﻿using Game_Menager_Web.Data;
-using Game_Menager_Web.Models;
+﻿using Game_Menager.Models;
 using Game_Menager_Web.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Game_Menager_Web.Controllers
 {
-	public class KartaPostaciController : Controller
+    public class KartaPostaciController : Controller
 	{
 
 		private readonly IHeroesRepository _HeroesRepo;

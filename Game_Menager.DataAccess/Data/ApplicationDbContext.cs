@@ -1,7 +1,7 @@
-﻿using Game_Menager_Web.Models;
+﻿using Game_Menager.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Game_Menager_Web.Data
+namespace Game_Menager.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {
