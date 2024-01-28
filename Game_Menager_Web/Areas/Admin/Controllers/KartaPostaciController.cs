@@ -2,10 +2,12 @@
 using Game_Menager.DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Game_Menager.DataAccess.Repository.IRepository;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Game_Menager_Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Authorize(Roles = "Admin")]
     public class KartaPostaciController : Controller
     {
         private readonly IHeroesRepository _HeroesRepo;

@@ -49,7 +49,7 @@ namespace Game_Menager_Web
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{area=Admin}/{controller=KartaPostaci}/{action=Index}/{id?}");
+				pattern: "{area=Gracz}/{controller=Home}/{action=Index}/{id?}");
 
 			app.Run();
 		}
