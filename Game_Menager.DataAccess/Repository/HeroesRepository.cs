@@ -20,9 +20,9 @@ namespace Game_Menager.DataAccess.Repository
             _db = db;
         }
 
-		public  IEnumerable<Heroes> GetHeroesForUser(string user)
+		public  IEnumerable<Heroes> GetHeroesForUser(string Id)
 		{
-			return _db.Heroes.Where(h => h.User == user).ToList();
+			return _db.Heroes.Where(h => h.Name == Id).ToList();
 		}
 
 

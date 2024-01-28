@@ -53,8 +53,8 @@ namespace Game_Menager.DataAccess.Data
                     SkillDescription2 = "Postać Wystrzeliwuje serię strzał",
                     SkillDescription3 = "Postać skaczę wysoko",
                     SkillDescription4 = "Postać widzi na znaczną odległość",
-                    Level = 12,
-                    User = "Karol"
+                    Level = 12
+                    
                    
                 }
                 );
