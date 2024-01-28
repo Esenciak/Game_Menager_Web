@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kVYoIH3+B6YBeu6F3DUqth5TmfvGQ36Pw5igyrnU8ukJ9knrXacajkYtHQuxfQTn+CXDNyD77mPrkUWXwNY0kQ==",
+  "dgSpecHash": "WQ5WbJi0/Kv/loRAEXktxT9icrzZl8h4zmoBPdfJ7Lvt07aZw0N4EdF5G0rvzykssgxNOBnVsQhtGEmiHYjn5g==",
   "success": true,
-  "projectFilePath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj",
+  "projectFilePath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
