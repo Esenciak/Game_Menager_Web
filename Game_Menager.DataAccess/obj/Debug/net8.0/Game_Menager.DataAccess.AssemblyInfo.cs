@@ -14,31 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Game_Menager.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1fbfb327a7f98e8811dab3bb0407aaf88f2ad0d5")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b16d61bc906529f499533cf0ebad4310946157e5")]
->>>>>>> parent of d9dc013 (.)
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c8f1a0adcfdf6a430a31c3c077c6fa55946a109")]
->>>>>>> parent of 358d744 (Zamiana na ApplicationIdentity i tworzenie fake wysyłania maili)
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c8f1a0adcfdf6a430a31c3c077c6fa55946a109")]
->>>>>>> parent of 358d744 (Zamiana na ApplicationIdentity i tworzenie fake wysyłania maili)
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c8f1a0adcfdf6a430a31c3c077c6fa55946a109")]
->>>>>>> parent of 358d744 (Zamiana na ApplicationIdentity i tworzenie fake wysyłania maili)
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cbec2e97d3e973237324c7424e78d69695a4d11")]
->>>>>>> parent of e8a12fd (Dodaje tworzenie konta)
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cbec2e97d3e973237324c7424e78d69695a4d11")]
->>>>>>> parent of e8a12fd (Dodaje tworzenie konta)
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32d88b2a1d94554813e5360ea074f00edbeef4b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Game_Menager.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Game_Menager.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

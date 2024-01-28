@@ -14,19 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Game_Menager.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9dc013804c57399e3ca3f266caa38b5f6a27ac6")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c8f1a0adcfdf6a430a31c3c077c6fa55946a109")]
->>>>>>> parent of d9dc013 (.)
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fdd78a1904e4700f517e0d16305d880e92df704b")]
->>>>>>> parent of e8a12fd (Dodaje tworzenie konta)
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fdd78a1904e4700f517e0d16305d880e92df704b")]
->>>>>>> parent of e8a12fd (Dodaje tworzenie konta)
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32d88b2a1d94554813e5360ea074f00edbeef4b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Game_Menager.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Game_Menager.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
