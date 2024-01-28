@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Game_Menager.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cbec2e97d3e973237324c7424e78d69695a4d11")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c8f1a0adcfdf6a430a31c3c077c6fa55946a109")]
 [assembly: System.Reflection.AssemblyProductAttribute("Game_Menager.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Game_Menager.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

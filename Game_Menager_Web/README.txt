@@ -50,3 +50,6 @@
 		W sql dodać level
 
 		poprawić w kartaPos te za ciemny kolor na zaklęciach
+
+		Test@gmail.com
+		Admin123*

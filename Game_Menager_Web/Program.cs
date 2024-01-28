@@ -18,7 +18,9 @@ namespace Game_Menager_Web
 			builder.Services.AddDbContext<ApplicationDbContext>(options=> 
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
 
-   builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+   builder.Services.AddDefaultIdentity<IdentityUser>(/*options => options.SignIn.RequireConfirmedAccount = true wyłączam potwierdzenie mailem*/).AddEntityFrameworkStores<ApplicationDbContext>();
+
+			builder.Services.AddRazorPages();
 
 			builder.Services.AddScoped<IHeroesRepository, HeroesRepository>();
 
@@ -38,8 +40,9 @@ namespace Game_Menager_Web
 
 			app.UseRouting();
 
-			//app.UseAuthentication(); jak ju� zrobimy to musi by� przed autoryzacj�
+			app.UseAuthentication();
 			app.UseAuthorization();
+			app.MapRazorPages();
 
 			app.MapControllerRoute(
 				name: "default",

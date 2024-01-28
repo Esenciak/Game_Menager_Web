@@ -18,6 +18,7 @@ namespace Game_Menager.DataAccess.Data
 
         // tworzy Db Hero w SQL
         public DbSet<Heroes> Heroes { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
         // dodaje dane do bazy sql Heroes
         protected override void OnModelCreating(ModelBuilder modelBuilder)

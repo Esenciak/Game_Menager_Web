@@ -4,6 +4,7 @@ using Game_Menager.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game_Menager.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240128121716_ExtendIdentityUser")]
+    partial class ExtendIdentityUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,12 +76,15 @@ namespace Game_Menager.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Skill2")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Skill3")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Skill4")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SkillDescription")
@@ -87,27 +93,30 @@ namespace Game_Menager.DataAccess.Migrations
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("SkillDescription2")
+                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("SkillDescription3")
+                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<string>("SkillDescription4")
+                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
                     b.Property<int>("SkillRank")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SkillRank2")
+                    b.Property<int>("SkillRank2")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SkillRank3")
+                    b.Property<int>("SkillRank3")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SkillRank4")
+                    b.Property<int>("SkillRank4")
                         .HasColumnType("int");
 
                     b.Property<int>("Speed")
@@ -117,6 +126,7 @@ namespace Game_Menager.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("User")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Weapon")
