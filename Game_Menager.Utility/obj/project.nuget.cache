@@ -1,23 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dkt7voC3ncHeefiXVzaaXgq4wvBCNsOUZfpi9MeJFVVpCHRnAd1eKu0c/pf5HC+jnBOqax/Rko4Z1oCbX/mp8g==",
+  "dgSpecHash": "nrUg4EH/5AIz0HY66vSBjMpAM/yAHG+7yrYYgus6jMDLOgYA2VbuGDpSLc4T8TjoEfUZnskQCb8pWw5S5dLsVA==",
   "success": true,
   "projectFilePath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.1\\microsoft.aspnetcore.cryptography.internal.8.0.1.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.1\\microsoft.aspnetcore.cryptography.keyderivation.8.0.1.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.1\\microsoft.aspnetcore.identity.ui.8.0.1.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\8.0.0\\microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\8.0.1\\microsoft.extensions.fileproviders.embedded.8.0.1.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.identity.core\\8.0.1\\microsoft.extensions.identity.core.8.0.1.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.identity.stores\\8.0.1\\microsoft.extensions.identity.stores.8.0.1.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0\\microsoft.extensions.logging.8.0.0.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.options\\8.0.1\\microsoft.extensions.options.8.0.1.nupkg.sha512",
-    "C:\\Users\\48607\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
