@@ -1,9 +1,11 @@
 ﻿using Game_Menager.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Game_Menager.DataAccess.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options): base(options)
         {
@@ -20,6 +22,9 @@ namespace Game_Menager.DataAccess.Data
         // dodaje dane do bazy sql Heroes
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Heroes>().HasData(
                 new Heroes
                 {

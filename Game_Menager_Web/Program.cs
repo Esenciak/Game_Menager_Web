@@ -2,6 +2,7 @@ using Game_Menager.DataAccess.Data;
 using Game_Menager.DataAccess.Repository;
 using Game_Menager.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace Game_Menager_Web
 {
@@ -16,6 +17,8 @@ namespace Game_Menager_Web
 
 			builder.Services.AddDbContext<ApplicationDbContext>(options=> 
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
+
+   builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 
 			builder.Services.AddScoped<IHeroesRepository, HeroesRepository>();
 
@@ -35,7 +38,7 @@ namespace Game_Menager_Web
 
 			app.UseRouting();
 
-			//app.UseAuthentication(); jak ju¿ zrobimy to musi byæ przed autoryzacj¹
+			//app.UseAuthentication(); jak juï¿½ zrobimy to musi byï¿½ przed autoryzacjï¿½
 			app.UseAuthorization();
 
 			app.MapControllerRoute(
