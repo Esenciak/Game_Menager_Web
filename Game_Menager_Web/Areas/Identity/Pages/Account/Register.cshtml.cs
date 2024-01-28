@@ -157,7 +157,7 @@ namespace Game_Menager_Web.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _userManager.AddToRoleAsync(user, SD.Role_Testowy);
+                        await _userManager.AddToRoleAsync(user, SD.Role_Gracz);
                     }
 
 
