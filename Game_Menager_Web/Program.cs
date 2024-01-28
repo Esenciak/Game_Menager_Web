@@ -20,7 +20,7 @@ namespace Game_Menager_Web
 			builder.Services.AddDbContext<ApplicationDbContext>(options=> 
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
 
-   builder.Services.AddIdentity<IdentityUser,IdentityRole>(/*options => options.SignIn.RequireConfirmedAccount = true wyłączam potwierdzenie mailem*/).AddEntityFrameworkStores<ApplicationDbContext>();
+   builder.Services.AddIdentity<IdentityUser,IdentityRole>(/*options => options.SignIn.RequireConfirmedAccount = true wyłączam potwierdzenie mailem*/).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 												// dodałem role
 			builder.Services.AddRazorPages();
 			builder.Services.AddScoped<IEmailSender, EmailSender>();
