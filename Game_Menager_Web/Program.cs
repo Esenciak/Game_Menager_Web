@@ -3,6 +3,8 @@ using Game_Menager.DataAccess.Repository;
 using Game_Menager.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Game_Menager.Utility;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Game_Menager_Web
 {
@@ -21,6 +23,7 @@ namespace Game_Menager_Web
    builder.Services.AddIdentity<IdentityUser,IdentityRole>(/*options => options.SignIn.RequireConfirmedAccount = true wyłączam potwierdzenie mailem*/).AddEntityFrameworkStores<ApplicationDbContext>();
 												// dodałem role
 			builder.Services.AddRazorPages();
+			builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 			builder.Services.AddScoped<IHeroesRepository, HeroesRepository>();
 
