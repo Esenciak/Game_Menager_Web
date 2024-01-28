@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Game_Menager_Web.Repository.IRepository
+namespace Game_Menager.DataAccess.Repository.IRepository
 {
     public interface IHeroesRepository : IRepository<Heroes> //na co mamy zamienione "Category"?
     {

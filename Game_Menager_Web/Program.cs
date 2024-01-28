@@ -1,5 +1,5 @@
 using Game_Menager.DataAccess.Data;
-using Game_Menager_Web.Repository;
+using Game_Menager.DataAccess.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace Game_Menager_Web
@@ -39,7 +39,7 @@ namespace Game_Menager_Web
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{controller=Home}/{action=Index}/{id?}");
+				pattern: "{area=Admin}/{controller=KartaPostaci}/{action=Index}/{id?}");
 
 			app.Run();
 		}

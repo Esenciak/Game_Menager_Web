@@ -1,7 +1,7 @@
 ﻿using Game_Menager.Models;
-using Game_Menager_Web.Repository.IRepository;
+using Game_Menager.DataAccess.Repository.IRepository;
 
-namespace Game_Menager_Web.Repository
+namespace Game_Menager.DataAccess.Repository
 {
     public interface IHeroesRepository : IRepository<Heroes>
     {

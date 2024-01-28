@@ -22,7 +22,7 @@ namespace Game_Menager.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Game_Menager_Web.Models.Heroes", b =>
+            modelBuilder.Entity("Game_Menager.Models.Heroes", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -122,6 +122,10 @@ namespace Game_Menager.DataAccess.Migrations
                     b.Property<int>("Strenght")
                         .HasColumnType("int");
 
+                    b.Property<string>("User")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Weapon")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -159,6 +163,7 @@ namespace Game_Menager.DataAccess.Migrations
                             SkillRank4 = 5,
                             Speed = 120,
                             Strenght = 40,
+                            User = "Karol",
                             Weapon = "Bow"
                         });
                 });

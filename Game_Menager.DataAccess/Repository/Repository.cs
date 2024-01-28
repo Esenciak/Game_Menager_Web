@@ -4,12 +4,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using Game_Menager_Web.Repository.IRepository;
+using Game_Menager.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Game_Menager.DataAccess.Data;
 
-namespace Game_Menager_Web.Repository
+namespace Game_Menager.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game_Menager.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240120130716_AddCategoryTableToDbHero")]
-    partial class AddCategoryTableToDbHero
+    [Migration("20240128095534_AddHeroesToDbAndSeed")]
+    partial class AddHeroesToDbAndSeed
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +25,7 @@ namespace Game_Menager.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Game_Menager_Web.Models.Heroes", b =>
+            modelBuilder.Entity("Game_Menager.Models.Heroes", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,6 +56,9 @@ namespace Game_Menager.DataAccess.Migrations
                     b.Property<int>("HP")
                         .HasColumnType("int");
 
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
+
                     b.Property<int>("Mana")
                         .HasColumnType("int");
 
@@ -66,20 +69,54 @@ namespace Game_Menager.DataAccess.Migrations
 
                     b.Property<string>("Race")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Skill")
                         .IsRequired()
-                        .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Skill2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Skill3")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Skill4")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SkillDescription")
                         .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
+                    b.Property<string>("SkillDescription2")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("SkillDescription3")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("SkillDescription4")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
                     b.Property<int>("SkillRank")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SkillRank2")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SkillRank3")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SkillRank4")
                         .HasColumnType("int");
 
                     b.Property<int>("Speed")
@@ -88,10 +125,13 @@ namespace Game_Menager.DataAccess.Migrations
                     b.Property<int>("Strenght")
                         .HasColumnType("int");
 
+                    b.Property<string>("User")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Weapon")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -108,14 +148,25 @@ namespace Game_Menager.DataAccess.Migrations
                             Gender = "Male",
                             Gold = 20,
                             HP = 70,
+                            Level = 12,
                             Mana = 20,
                             Name = "Legolas",
                             Race = "Elf",
                             Skill = "Ciche kroki",
+                            Skill2 = "Szybkie strzelanie",
+                            Skill3 = "Wysoki skok",
+                            Skill4 = "Sokole oko",
                             SkillDescription = "Postać porusza się bezszelestnie",
+                            SkillDescription2 = "Postać Wystrzeliwuje serię strzał",
+                            SkillDescription3 = "Postać skaczę wysoko",
+                            SkillDescription4 = "Postać widzi na znaczną odległość",
                             SkillRank = 5,
+                            SkillRank2 = 5,
+                            SkillRank3 = 5,
+                            SkillRank4 = 5,
                             Speed = 120,
                             Strenght = 40,
+                            User = "Karol",
                             Weapon = "Bow"
                         });
                 });
