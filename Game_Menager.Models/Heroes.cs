@@ -126,9 +126,5 @@ namespace Game_Menager.Models
             get { return DateTime.Now; }
             set { _createdDateTime = value; }
         }
-
-        //[Required] dodać po zrobieniu logowania
-        [DisplayName("User:  ")]
-        public string User { get; set; }
     }
 }

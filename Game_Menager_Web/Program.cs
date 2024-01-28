@@ -19,13 +19,6 @@ namespace Game_Menager_Web
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
 
 
-   builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
-
-   builder.Services.AddIdentity<IdentityUser,IdentityRole>(/*options => options.SignIn.RequireConfirmedAccount = true wyłączam potwierdzenie mailem*/).AddEntityFrameworkStores<ApplicationDbContext>();
-												// dodałem role
-			builder.Services.AddRazorPages();
-
-
 			builder.Services.AddScoped<IHeroesRepository, HeroesRepository>();
 
 

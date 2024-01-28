@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Game_Menager.DataAccess.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options): base(options)
         {
