@@ -7,6 +7,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Game_Menager.DataAccess.Repository.IRepository;
 
 namespace Game_Menager.DataAccess.Repository
 {
@@ -19,7 +20,13 @@ namespace Game_Menager.DataAccess.Repository
             _db = db;
         }
 
-        public void Save()
+		public  IEnumerable<Heroes> GetHeroesForUser(string user)
+		{
+			return _db.Heroes.Where(h => h.User == user).ToList();
+		}
+
+
+		public void Save()
         {
             _db.SaveChanges();
         }

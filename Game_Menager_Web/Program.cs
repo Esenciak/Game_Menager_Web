@@ -1,5 +1,6 @@
 using Game_Menager.DataAccess.Data;
 using Game_Menager.DataAccess.Repository;
+using Game_Menager.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 
 namespace Game_Menager_Web

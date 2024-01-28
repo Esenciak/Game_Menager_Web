@@ -1,6 +1,7 @@
 ﻿using Game_Menager.Models;
 using Game_Menager.DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Game_Menager.DataAccess.Repository.IRepository;
 
 namespace Game_Menager_Web.Areas.Admin.Controllers
 {

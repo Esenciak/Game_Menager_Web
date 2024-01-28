@@ -9,7 +9,8 @@ namespace Game_Menager.DataAccess.Repository.IRepository
 {
     public interface IHeroesRepository : IRepository<Heroes> //na co mamy zamienione "Category"?
     {
-        void Update(Heroes obj);
+		IEnumerable<Heroes> GetHeroesForUser(string user);
+		void Update(Heroes obj);
         void Save();
     }
 }
