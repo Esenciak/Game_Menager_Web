@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Game_Menager.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6518495f28036c48b65a199cb1aacb0c66318e82")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a84abf7f93dfd36a76c13aba5f2df0efe504671")]
 [assembly: System.Reflection.AssemblyProductAttribute("Game_Menager.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Game_Menager.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
