@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Game_Menager.Models
-build_property.ProjectDir = C:\Users\popio\OneDrive\Desktop\Studia\D&D\Game_Menager_Web\Game_Menager.Models\
+build_property.ProjectDir = D:\Programowanie\Webówki\.net\Game_Menager_Web\Game_Menager.Models\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
