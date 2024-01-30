@@ -19,7 +19,7 @@ namespace Game_Menager_Web.Areas.Gracz.Controllers
         {
             // dodaje naszą liste do strony
             List<Heroes> objHeroesList = _HeroesRepo.GetAll().ToList();
-            // przekierowuje na stronę do logowania
+            // przekierowuje na stronę do logowania asddasdas
             return View(objHeroesList);
         }
         public IActionResult Create()
