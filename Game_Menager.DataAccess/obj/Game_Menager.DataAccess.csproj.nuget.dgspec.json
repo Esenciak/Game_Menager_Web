@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj": {}
+    "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj": {
+    "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj",
+        "projectUniqueName": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj",
         "projectName": "Game_Menager.DataAccess",
-        "projectPath": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\popio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.DataAccess\\obj\\",
+        "projectPath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.DataAccess\\Game_Menager.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\48607\\.nuget\\packages\\",
+        "outputPath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\popio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\48607\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,18 +22,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj": {
-                "projectPath": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj"
+              "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj": {
+                "projectPath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj"
               },
-              "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj": {
-                "projectPath": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj"
+              "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj": {
+                "projectPath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj"
               }
             }
           }
@@ -91,21 +86,17 @@
         }
       }
     },
-    "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj": {
+    "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj",
+        "projectUniqueName": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj",
         "projectName": "Game_Menager.Models",
-        "projectPath": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj",
-        "packagesPath": "C:\\Users\\popio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Models\\obj\\",
+        "projectPath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Models\\Game_Menager.Models.csproj",
+        "packagesPath": "C:\\Users\\48607\\.nuget\\packages\\",
+        "outputPath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\popio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\48607\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,7 +104,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -157,21 +147,17 @@
         }
       }
     },
-    "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj": {
+    "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj",
+        "projectUniqueName": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj",
         "projectName": "Game_Menager.Utility",
-        "projectPath": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj",
-        "packagesPath": "C:\\Users\\popio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\popio\\OneDrive\\Desktop\\Studia\\D&D\\Game_Menager_Web\\Game_Menager.Utility\\obj\\",
+        "projectPath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Utility\\Game_Menager.Utility.csproj",
+        "packagesPath": "C:\\Users\\48607\\.nuget\\packages\\",
+        "outputPath": "D:\\Programowanie\\Webówki\\.net\\Game_Menager_Web\\Game_Menager.Utility\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\popio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\48607\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -179,7 +165,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
