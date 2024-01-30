@@ -16,14 +16,29 @@ namespace Game_Menager.DataAccess.Data
         // Table które będzie tworzone w SQL
  
 
-        // tworzy Db Hero w SQL
+        // tworzy Db Hero, Users, Role w SQL
         public DbSet<Heroes> Heroes { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         // dodaje dane do bazy sql Heroes
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<User>()
+                .Property(x => x.Email)
+                .IsRequired();
+
+            modelBuilder.Entity<Role>().HasData(
+               new Role
+               {
+                   Id = 1,
+                   Name = "user"
+               }
+               );
+
 
             modelBuilder.Entity<Heroes>().HasData(
                 new Heroes
