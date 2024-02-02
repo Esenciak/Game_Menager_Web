@@ -1,5 +1,6 @@
 ﻿using Game_Menager_Web.Models;
 using Microsoft.EntityFrameworkCore;
+using Game_Menager_Web.KiedysFront;
 
 namespace Game_Menager_Web.Data
 {
