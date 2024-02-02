@@ -15,9 +15,11 @@ namespace Game_Menager_Web
 			builder.Services.AddDbContext<ApplicationDbContext>(options=> 
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
 
+            // builder.Services.AddDbContext<ApplicationDbContext>(); Do seedera
+            // builder.Services.AddScoped<DandDSeeder>();    Do seedera
 
 
-			var app = builder.Build();
+            var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())

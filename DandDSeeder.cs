@@ -1,51 +1,38 @@
-﻿using Game_Menager_Web.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using Game_Menager_Web.Data;
+using Game_Menager_Web.Models;
 
-namespace Game_Menager_Web.Data
+namespace Game_Menager_Web
 {
-    public class ApplicationDbContext : DbContext
+    public class DandDSeeder
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options): base(options)
+        private readonly ApplicationDbContext _dbContext;
+        public DandDSeeder(ApplicationDbContext dbContext)
         {
-            
+            _dbContext = dbContext;
         }
-
-        //Klasa która będzie tworzona i obsługiwana, nazwa to 
-        // Table które będzie tworzone w SQL
- 
-
-        // tworzy Db Hero w SQL
-        public DbSet<Heroes> Heroes { get; set; }
-        public DbSet<User> User { get; set; }
-        public DbSet<Role> Role { get; set; }
-
-
-
-        // dodaje dane do bazy sql Heroes
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public void seed()
         {
-            modelBuilder.Entity<User>()
-                .Property(u => u.Email)
-                .IsRequired();
-
-            modelBuilder.Entity<Role>().HasData(
-               new Role
-               {
-                   Id = 1,
-                   Name = "User"
-               },
-               new Role
-               {
-                   Id = 2,
-                   Name = "GameMaster"
-               },
-                new Role
+           if(_dbContext.Database.CanConnect())
+            {
+                if(!_dbContext.Heroes.Any())
                 {
-                    Id = 3,
-                    Name = "Admin"
+                    var Hero = GetHero();
+                    _dbContext.Heroes.AddRange(Hero);
+                    _dbContext.SaveChanges();
                 }
-            );
-            modelBuilder.Entity<Heroes>().HasData(
+            }
+
+        }
+        private IEnumerable<Heroes> GetHero()
+        {
+            var Hero = new List<Heroes>()
+            {
                 new Heroes
                 {
                     Id = 1,
@@ -74,10 +61,9 @@ namespace Game_Menager_Web.Data
                     SkillDescription3 = "Postać skaczę wysoko",
                     SkillDescription4 = "Postać widzi na znaczną odległość",
                     Level = 12
-                }
-                );
+                },
+            };
+            return Hero;
         }
-            
-
     }
 }
