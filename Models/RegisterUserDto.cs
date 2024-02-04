@@ -10,12 +10,9 @@ namespace Game_Menager_Web.Models
 {
     public class RegisterUserDto
     {
-        [Required]
         public string UserName { get; set; }
-        [Required]
-        [MinLength(7)]
         public string Password { get; set; }
-        [Required]
+        public string ConfirmPassword { get; set; }
         public string Email { get; set; }
         public int RoleId { get; set; } = 1;
 
