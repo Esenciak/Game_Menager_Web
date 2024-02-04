@@ -5,6 +5,7 @@ using Game_Menager_Web.Models;
 using Game_Menager_Web.KiedysFront;
 using Microsoft.Identity.Client;
 using Game_Menager_Web.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace Game_Menager_Web.KiedysFront
 {
@@ -12,12 +13,14 @@ namespace Game_Menager_Web.KiedysFront
     {
         void RegisterUser(RegisterUserDto dto);
     }
-    public class AccountService
+    public class AccountService : IAccountService
     {
         private readonly ApplicationDbContext _context;
-        public AccountService(ApplicationDbContext context) 
+        private readonly IPasswordHasher<User> _passwordHasher;
+        public AccountService(ApplicationDbContext context, IPasswordHasher<User> passwordHasher) 
         {
             _context = context;
+            _passwordHasher = passwordHasher;
         }
         public void RegisterUser(RegisterUserDto dto)
         {
@@ -28,7 +31,9 @@ namespace Game_Menager_Web.KiedysFront
                 Email = dto.Email,
                 RoleId = dto.RoleId
             };
+            var hashedPassword = _passwordHasher.HashPassword(newUser, dto.Password);
 
+            newUser.PasswordHash = hashedPassword; 
             _context.User.Add(newUser);
             _context.SaveChanges();
         }

@@ -11,7 +11,8 @@ using Game_Menager_Web.KiedysFront;
 
 namespace Game_Menager_Web.Controllers
 {
-	[Route("api/account")] //usunaæ w razie potrzeby
+
+	[Route("api/account")] 
     [ApiController]
 	public class AccountControler : Controller
 	{
@@ -20,7 +21,8 @@ namespace Game_Menager_Web.Controllers
 		{
 			_accountService = accountService;
 		}
-		[HttpPost("register")] //usunaæ w razie potrzeby
+
+		[HttpPost("register")] 
 		public ActionResult RegisterUser([FromBody] RegisterUserDto dto)
 		{
 			_accountService.RegisterUser(dto);
