@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Game_Menager_Web.Migrations
 {
     /// <inheritdoc />
-    public partial class dbadd : Migration
+    public partial class AddIdentity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

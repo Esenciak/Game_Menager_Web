@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game_Menager_Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240205210445_dbadd")]
-    partial class dbadd
+    [Migration("20240205210811_AddIdentity")]
+    partial class AddIdentity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
