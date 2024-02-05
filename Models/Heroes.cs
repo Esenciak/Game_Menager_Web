@@ -77,41 +77,32 @@ namespace Game_Menager_Web.Models
         [DisplayName("Opis Głównej umiejętności")]
         public string SkillDescription { get; set; }
 
-        [Required]
         [DisplayName("Umiejętność 2")]
         public string Skill2 { get; set; }
 
-        [Required]
         [DisplayName("Poziom Umiejętności 2")]
         public int SkillRank2 { get; set; }
 
-        [Required]
         [MaxLength(1000)]
         [DisplayName("Opis Umiejętności 2")]
         public string SkillDescription2 { get; set; }
 
-        [Required]
         [DisplayName("Umiejętność 3")]
         public string Skill3 { get; set; }
 
-        [Required]
         [DisplayName("Poziom Umiejętności 3")]
         public int SkillRank3 { get; set; }
 
-        [Required]
         [MaxLength(1000)]
         [DisplayName("Opis Umiejętności 3")]
         public string SkillDescription3 { get; set; }
 
-        [Required]
         [DisplayName("Umiejętność 4")]
         public string Skill4 { get; set; }
 
-        [Required]
         [DisplayName("Poziom Umiejętności 4")]
         public int SkillRank4 { get; set; }
 
-        [Required]
         [MaxLength(1000)]
         [DisplayName("Opis Umiejętności 4")]
         public string SkillDescription4 { get; set; }
@@ -120,6 +111,38 @@ namespace Game_Menager_Web.Models
         [Range(1, 10000, ErrorMessage = "Numer musi być pomiędzy 1-10000")]
         [DisplayName("Level")]
         public int Level { get; set; }
+
+        [MaxLength(30)]
+        [DisplayName("Przedmiot")]
+        public string Przedmiot1 {  get; set; }
+
+        [MaxLength(200)]
+        [DisplayName("Opis 1 przedmiotu")]
+        public string przedmiot1_Opis { get; set; }
+        
+        [MaxLength(30)]
+        [DisplayName("Przedmiot 2")]
+        public string Przedmiot2 { get; set; }
+
+        [MaxLength(200)]
+        [DisplayName("Opis 2 przedmiotu")]
+        public string przedmiot2_Opis { get; set; }
+        [MaxLength(30)]
+        [DisplayName("Przedmiot 3")]
+        public string Przedmiot3 { get; set; }
+
+        [MaxLength(200)]
+        [DisplayName("Opis 3 przedmiotu")]
+        public string przedmiot3_Opis { get; set; }
+        [MaxLength(30)]
+        [DisplayName("Przedmiot 4")]
+        public string Przedmiot4 { get; set; }
+
+        [MaxLength(200)]
+        [DisplayName("Opis 4 przedmiotu")]
+        public string przedmiot4_Opis { get; set; }
+
+
 
         public DateTime CreatedDateTime
         {
