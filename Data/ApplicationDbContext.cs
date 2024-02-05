@@ -22,6 +22,8 @@ namespace Game_Menager_Web.Data
         // dodaje dane do bazy sql Heroes
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Heroes>().HasData(
                 new Heroes
                 {
