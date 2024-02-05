@@ -1,5 +1,6 @@
 using Game_Menager_Web.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace Game_Menager_Web
 {
@@ -14,6 +15,8 @@ namespace Game_Menager_Web
 
 			builder.Services.AddDbContext<ApplicationDbContext>(options=> 
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
+
+   builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 
 
 
@@ -32,7 +35,7 @@ namespace Game_Menager_Web
 
 			app.UseRouting();
 
-			//app.UseAuthentication(); jak ju¿ zrobimy to musi byæ przed autoryzacj¹
+			app.UseAuthentication();
 			app.UseAuthorization();
 
 			app.MapControllerRoute(
