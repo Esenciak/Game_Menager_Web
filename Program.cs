@@ -16,15 +16,17 @@ namespace Game_Menager_Web
 
 			builder.Services.AddDbContext<ApplicationDbContext>(options=> 
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DeafaultConnection")));
-
-   builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
-            //builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-            //    .AddEntityFrameworkStores<IdentityDbContext>()
-            //    .AddDefaultTokenProviders();
+            builder.Services.AddIdentity<IdentityUser,IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<ApplicationDbContext>();
+            builder.Services.AddRazorPages();
 
 
+			//builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+			//	.AddEntityFrameworkStores<IdentityDbContext>()
+			//	.AddDefaultTokenProviders();
 
-            var app = builder.Build();
+
+
+			var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
 			if (!app.Environment.IsDevelopment())
@@ -38,10 +40,10 @@ namespace Game_Menager_Web
 			app.UseStaticFiles();
 
 			app.UseRouting();
-
+			
 			app.UseAuthentication();
 			app.UseAuthorization();
-
+			app.MapRazorPages();
 			app.MapControllerRoute(
 				name: "default",
 				pattern: "{controller=Home}/{action=Index}/{id?}");

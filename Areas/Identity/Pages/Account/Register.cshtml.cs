@@ -39,7 +39,7 @@ namespace Game_Menager_Web.Areas.Identity.Pages.Account
         {
             _userManager = userManager;
             _userStore = userStore;
-            _emailStore = GetEmailStore();
+            _emailStore = GetEmailStore();  
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
@@ -143,7 +143,7 @@ namespace Game_Menager_Web.Areas.Identity.Pages.Account
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }
-                }
+                } 
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
