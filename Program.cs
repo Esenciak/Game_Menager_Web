@@ -20,7 +20,7 @@ namespace Game_Menager_Web
    builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddIdentity<IdentityUser,IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddRazorPages();
-
+			builder.Services.AddScoped<IEmailSender,EmailSender>();
 
 			//builder.Services.AddIdentity<IdentityUser, IdentityRole>()
 			//	.AddEntityFrameworkStores<IdentityDbContext>()
