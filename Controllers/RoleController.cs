@@ -10,3 +10,6 @@ namespace Game_Menager_Web.Controllers
         }
     }
 }
+
+
+
