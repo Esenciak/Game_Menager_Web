@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game_Menager_Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240215172612_ExtendentIdentityUser")]
-    partial class ExtendentIdentityUser
+    [Migration("20240215184459_dzialajarole")]
+    partial class dzialajarole
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
