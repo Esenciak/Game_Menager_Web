@@ -4,6 +4,7 @@ using Game_Menager_Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game_Menager_Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240217171715_dbupd")]
+    partial class dbupd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,9 +125,6 @@ namespace Game_Menager_Web.Migrations
                     b.Property<int>("Strenght")
                         .HasColumnType("int");
 
-                    b.Property<string>("UserEmail")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Weapon")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -162,7 +162,6 @@ namespace Game_Menager_Web.Migrations
                             SkillRank4 = 5,
                             Speed = 120,
                             Strenght = 40,
-                            UserEmail = "TEST@GMAIL.COM",
                             Weapon = "Bow"
                         });
                 });

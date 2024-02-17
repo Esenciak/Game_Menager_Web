@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Game_Menager_Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240215184459_dzialajarole")]
-    partial class dzialajarole
+    [Migration("20240217172502_dbupd2")]
+    partial class dbupd2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,26 +63,6 @@ namespace Game_Menager_Web.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Przedmiot1")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Przedmiot2")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Przedmiot3")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<string>("Przedmiot4")
                         .IsRequired()
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
@@ -145,29 +125,12 @@ namespace Game_Menager_Web.Migrations
                     b.Property<int>("Strenght")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserEmail")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Weapon")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("przedmiot1_Opis")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("przedmiot2_Opis")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("przedmiot3_Opis")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("przedmiot4_Opis")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
 
@@ -187,10 +150,6 @@ namespace Game_Menager_Web.Migrations
                             Level = 12,
                             Mana = 20,
                             Name = "Legolas",
-                            Przedmiot1 = "Stzrała",
-                            Przedmiot2 = "łuk",
-                            Przedmiot3 = "koń",
-                            Przedmiot4 = "Miecz",
                             Race = "Elf",
                             Skill = "Ciche kroki",
                             Skill2 = "Szybkie strzelanie",
@@ -206,11 +165,8 @@ namespace Game_Menager_Web.Migrations
                             SkillRank4 = 5,
                             Speed = 120,
                             Strenght = 40,
-                            Weapon = "Bow",
-                            przedmiot1_Opis = "test",
-                            przedmiot2_Opis = "test",
-                            przedmiot3_Opis = "test",
-                            przedmiot4_Opis = "test"
+                            UserEmail = "TEST@GMAIL.COM",
+                            Weapon = "Bow"
                         });
                 });
 

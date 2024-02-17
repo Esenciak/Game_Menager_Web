@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 
 namespace Game_Menager_Web.Models
 {
@@ -112,39 +114,21 @@ namespace Game_Menager_Web.Models
         [DisplayName("Level")]
         public int Level { get; set; }
 
-        [MaxLength(30)]
-        [DisplayName("Przedmiot")]
-        public string Przedmiot1 {  get; set; }
+		[DisplayName("Email użytkownika")]
+		public string? UserEmail { get; set; }
 
-        [MaxLength(200)]
-        [DisplayName("Opis 1 przedmiotu")]
-        public string przedmiot1_Opis { get; set; }
-        
-        [MaxLength(30)]
-        [DisplayName("Przedmiot 2")]
-        public string Przedmiot2 { get; set; }
-
-        [MaxLength(200)]
-        [DisplayName("Opis 2 przedmiotu")]
-        public string przedmiot2_Opis { get; set; }
-        [MaxLength(30)]
-        [DisplayName("Przedmiot 3")]
-        public string Przedmiot3 { get; set; }
-
-        [MaxLength(200)]
-        [DisplayName("Opis 3 przedmiotu")]
-        public string przedmiot3_Opis { get; set; }
-        [MaxLength(30)]
-        [DisplayName("Przedmiot 4")]
-        public string Przedmiot4 { get; set; }
-
-        [MaxLength(200)]
-        [DisplayName("Opis 4 przedmiotu")]
-        public string przedmiot4_Opis { get; set; }
+		public static string GetUserEmail(UserManager<ApplicationUser> userManager, ClaimsPrincipal user)
+		{
+			var applicationUser = userManager.GetUserAsync(user).Result;
+			if (applicationUser != null)
+			{
+				return applicationUser.Email;
+			}
+			return null;
+		}
 
 
-
-        public DateTime CreatedDateTime
+		public DateTime CreatedDateTime
         {
             get { return DateTime.Now; }
             set { _createdDateTime = value; }

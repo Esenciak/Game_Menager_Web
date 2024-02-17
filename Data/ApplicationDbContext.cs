@@ -54,14 +54,7 @@ namespace Game_Menager_Web.Data
                     SkillDescription3 = "Postać skaczę wysoko",
                     SkillDescription4 = "Postać widzi na znaczną odległość",
                     Level = 12,
-                    Przedmiot1 = "Stzrała",
-                    Przedmiot2 = "łuk",
-                    Przedmiot3 = "koń",
-                    Przedmiot4 = "Miecz",
-                    przedmiot1_Opis = "test",
-                    przedmiot2_Opis = "test",
-                    przedmiot3_Opis = "test",
-                    przedmiot4_Opis = "test"
+                    UserEmail = "TEST@GMAIL.COM"
                 }
                 );
         }

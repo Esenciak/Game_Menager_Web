@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Game_Menager_Web.Migrations
 {
     /// <inheritdoc />
-    public partial class dzialajarole : Migration
+    public partial class dbupd : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -83,14 +83,6 @@ namespace Game_Menager_Web.Migrations
                     SkillRank4 = table.Column<int>(type: "int", nullable: false),
                     SkillDescription4 = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                     Level = table.Column<int>(type: "int", nullable: false),
-                    Przedmiot1 = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    przedmiot1_Opis = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Przedmiot2 = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    przedmiot2_Opis = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Przedmiot3 = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    przedmiot3_Opis = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Przedmiot4 = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    przedmiot4_Opis = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     CreatedDateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -206,8 +198,8 @@ namespace Game_Menager_Web.Migrations
 
             migrationBuilder.InsertData(
                 table: "Heroes",
-                columns: new[] { "Id", "Age", "CreatedDateTime", "Description", "Dexterity", "Gender", "Gold", "HP", "Level", "Mana", "Name", "Przedmiot1", "Przedmiot2", "Przedmiot3", "Przedmiot4", "Race", "Skill", "Skill2", "Skill3", "Skill4", "SkillDescription", "SkillDescription2", "SkillDescription3", "SkillDescription4", "SkillRank", "SkillRank2", "SkillRank3", "SkillRank4", "Speed", "Strenght", "Weapon", "przedmiot1_Opis", "przedmiot2_Opis", "przedmiot3_Opis", "przedmiot4_Opis" },
-                values: new object[] { 1, 1200, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "elf pochodzący ze szczepu Sindarów. W Trzeciej Erze był członkiem Drużyny Pierścienia.", 100, "Male", 20, 70, 12, 20, "Legolas", "Stzrała", "łuk", "koń", "Miecz", "Elf", "Ciche kroki", "Szybkie strzelanie", "Wysoki skok", "Sokole oko", "Postać porusza się bezszelestnie", "Postać Wystrzeliwuje serię strzał", "Postać skaczę wysoko", "Postać widzi na znaczną odległość", 5, 5, 5, 5, 120, 40, "Bow", "test", "test", "test", "test" });
+                columns: new[] { "Id", "Age", "CreatedDateTime", "Description", "Dexterity", "Gender", "Gold", "HP", "Level", "Mana", "Name", "Race", "Skill", "Skill2", "Skill3", "Skill4", "SkillDescription", "SkillDescription2", "SkillDescription3", "SkillDescription4", "SkillRank", "SkillRank2", "SkillRank3", "SkillRank4", "Speed", "Strenght", "Weapon" },
+                values: new object[] { 1, 1200, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "elf pochodzący ze szczepu Sindarów. W Trzeciej Erze był członkiem Drużyny Pierścienia.", 100, "Male", 20, 70, 12, 20, "Legolas", "Elf", "Ciche kroki", "Szybkie strzelanie", "Wysoki skok", "Sokole oko", "Postać porusza się bezszelestnie", "Postać Wystrzeliwuje serię strzał", "Postać skaczę wysoko", "Postać widzi na znaczną odległość", 5, 5, 5, 5, 120, 40, "Bow" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
