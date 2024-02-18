@@ -1,5 +1,45 @@
 ﻿@model Heroes
+<style>
+	body {
+		background-color: #202020; 
+		color: #c5c6c7; 
+		font-family: 'Times New Roman', Times, serif; 
+	}
 
+	.border {
+		border-color: #343434 !important; 
+	}
+
+	.form-control, .btn, select {
+		background-color: #1c1c1c;
+		border: 1px solid #444; 
+		color: #f8f8f8;
+	}
+		.btn-primary {
+		background-color: #555; 
+		border-color: #666; 
+	}
+
+	.btn-outline-danger {
+		border-color: #555; 
+		color: #aaa; 
+	}
+
+	.btn-primary:hover, .btn-outline-danger:hover {
+		background-color: #666; 
+		border-color: #777; 
+	}
+
+	h2.text-primary {
+		color: #aaa !important; 
+	}
+
+	.text-danger {
+		color: #ff5555 !important; 
+	}
+
+
+</style>
 <form metod="Post" asp-action="Create">
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
