@@ -1,5 +1,5 @@
 ﻿
-<h1>Edit</h1>
+@model Heroes
 <style>
 	body {
 		background-color: #202020;
@@ -17,10 +17,10 @@
 		color: #f8f8f8;
 	}
 
-	.form-control:disabled {
-		background-color: #333;
-		border: 1px solid #444;
-		color: #ddd;
+		.form-control:disabled {
+			background-color: #333;
+			border: 1px solid #444;
+			color: #ddd;
 		}
 
 	.btn-primary {
@@ -33,10 +33,10 @@
 		color: #aaa;
 	}
 
-	.btn-primary:hover, .btn-outline-danger:hover {
-		background-color: #666;
-		border-color: #777;
-	}
+		.btn-primary:hover, .btn-outline-danger:hover {
+			background-color: #666;
+			border-color: #777;
+		}
 
 	h2.text-primary {
 		color: #aaa !important;
@@ -47,8 +47,6 @@
 	}
 
 </style>
-@model Heroes
-
 <form metod="Post" asp-action="Delete">
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
