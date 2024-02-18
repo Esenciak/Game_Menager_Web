@@ -11,17 +11,29 @@
 		border-color: #343434 !important;
 	}
 
+	.stat-group {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.stat-group .mb-3 {
+		flex: 1;
+		margin: 5px;
+		min-width: 150px;
+	}
+
 	.form-control, .btn, select {
 		background-color: #1c1c1c;
 		border: 1px solid #444;
 		color: #f8f8f8;
 	}
 
-		.form-control:disabled {
-			background-color: #333;
-			border: 1px solid #444;
-			color: #ddd;
-		}
+	.form-control:disabled {
+		background-color: #333;
+		border: 1px solid #444;
+		color: #ddd;
+	}
 
 	.btn-primary {
 		background-color: #555;
@@ -97,35 +109,37 @@
 			</select>
 			<span asp-validation-for="Race" class="text-danger"></span>
 		</div>@*Tu można dać wybór rasy żeby było więcej funkcjonalności*@
-		<div class="mb-3 row p-1">
-			<label asp-for="HP" class="p-0"></label>
-			<input asp-for="HP" class="form-control" />
-			<span asp-validation-for="HP" class="text-danger"></span>
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Speed" class="p-0"></label>
-			<input asp-for="Speed" class="form-control" />
-			<span asp-validation-for="Speed" class="text-danger"></span>
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Gold" class="p-0"></label>
-			<input asp-for="Gold" class="form-control" />
-			<span asp-validation-for="Gold" class="text-danger"></span>
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Strenght" class="p-0"></label>
-			<input asp-for="Strenght" class="form-control" />
-			<span asp-validation-for="Strenght" class="text-danger"></span>
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Dexterity" class="p-0"></label>
-			<input asp-for="Dexterity" class="form-control" />
-			<span asp-validation-for="Dexterity" class="text-danger"></span>
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Mana" class="p-0"></label>
-			<input asp-for="Mana" class="form-control" />
-			<span asp-validation-for="Mana" class="text-danger"></span>
+		<div class="stat-group">
+			<div class="mb-3 row p-1">
+				<label asp-for="HP" class="p-0"></label>
+				<input asp-for="HP" class="form-control" />
+				<span asp-validation-for="HP" class="text-danger"></span>
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Speed" class="p-0"></label>
+				<input asp-for="Speed" class="form-control" />
+				<span asp-validation-for="Speed" class="text-danger"></span>
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Gold" class="p-0"></label>
+				<input asp-for="Gold" class="form-control" />
+				<span asp-validation-for="Gold" class="text-danger"></span>
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Strenght" class="p-0"></label>
+				<input asp-for="Strenght" class="form-control" />
+				<span asp-validation-for="Strenght" class="text-danger"></span>
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Dexterity" class="p-0"></label>
+				<input asp-for="Dexterity" class="form-control" />
+				<span asp-validation-for="Dexterity" class="text-danger"></span>
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Mana" class="p-0"></label>
+				<input asp-for="Mana" class="form-control" />
+				<span asp-validation-for="Mana" class="text-danger"></span>
+			</div>
 		</div>
 		<div class="mb-3 row p-1">
 			<label asp-for="Gender" class="p-0"></label>

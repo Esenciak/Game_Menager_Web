@@ -11,6 +11,18 @@
 		border-color: #343434 !important;
 	}
 
+	.stat-group {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.stat-group .mb-3 {
+		flex: 1;
+		margin: 5px;
+		min-width: 150px;
+	}
+
 	.form-control, .btn, select {
 		background-color: #1c1c1c;
 		border: 1px solid #444;
@@ -91,29 +103,31 @@
 				@*Tu dodajmy więcej ras*@
 			</select>
 		</div>@*Tu można dać wybór rasy żeby było więcej funkcjonalności*@
-		<div class="mb-3 row p-1">
-			<label asp-for="HP" class="p-0"></label>
-			<input asp-for="HP" disabled class="form-control" />
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Speed" class="p-0"></label>
-			<input asp-for="Speed" disabled class="form-control" />
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Gold" class="p-0"></label>
-			<input asp-for="Gold" disabled class="form-control" />
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Strenght" class="p-0"></label>
-			<input asp-for="Strenght" disabled class="form-control" />
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Dexterity" class="p-0"></label>
-			<input asp-for="Dexterity" disabled class="form-control" />
-		</div>
-		<div class="mb-3 row p-1">
-			<label asp-for="Mana" class="p-0"></label>
-			<input asp-for="Mana" disabled class="form-control" />
+		<div class="stat-group">
+			<div class="mb-3 row p-1">
+				<label asp-for="HP" class="p-0"></label>
+				<input asp-for="HP" disabled class="form-control" />
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Speed" class="p-0"></label>
+				<input asp-for="Speed" disabled class="form-control" />
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Gold" class="p-0"></label>
+				<input asp-for="Gold" disabled class="form-control" />
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Strenght" class="p-0"></label>
+				<input asp-for="Strenght" disabled class="form-control" />
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Dexterity" class="p-0"></label>
+				<input asp-for="Dexterity" disabled class="form-control" />
+			</div>
+			<div class="mb-3 row p-1">
+				<label asp-for="Mana" class="p-0"></label>
+				<input asp-for="Mana" disabled class="form-control" />
+			</div>
 		</div>
 		<div class="mb-3 row p-1">
 			<label asp-for="Gender" class="p-0"></label>
