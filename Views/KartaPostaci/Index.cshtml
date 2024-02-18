@@ -79,13 +79,12 @@
 		<tbody>
 			@foreach (var obj in Model.OrderBy(u => u.Id))
 			{
-				// Sprawdź, czy zalogowany użytkownik jest administratorem
+				// Sprawdza czy zalogowany użytkownik jest administratorem
 				var isAdmin = User.IsInRole(Role.Role_Admin);
 
-				// Sprawdź, czy użytkownik zalogowany ma dostęp do tej postaci
+				// Sprawdza czy użytkownik zalogowany ma dostęp do tej postaci
 				var hasAccess = obj.UserEmail == User.Identity.Name || isAdmin;
 
-				// Jeśli użytkownik ma dostęp, wyświetl postać
 				if (hasAccess)
 				{
 					<tr>
