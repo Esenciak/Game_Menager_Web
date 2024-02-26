@@ -1,0 +1,114 @@
+﻿
+@model List<Heroes>
+<partial name="_Notification" />
+<style>
+	body {
+		background-color: #282828 !important; 
+		color: #CCCCCC !important; 
+		font-family: 'Garamond', serif; 
+	}
+
+	.container {
+		padding: 20px;
+	}
+
+	h2.text-primary {
+		color: #A5A5A5 !important; 
+	}
+
+	.btn-primary {
+		background-color: #444 !important; 
+		border: none !important;
+	}
+
+	.btn-outline-warning {
+		color: #FFCC00 !important; 
+		border-color: #FFCC00 !important; 
+	}
+
+	.btn-danger {
+		background-color: #660000 !important; 
+		border: none !important;
+	}
+
+	.btn-info {
+		background-color: #2D4B5E !important; 
+		border: none !important;
+	}
+
+	table {
+		background-color: #333333 !important; 
+		border: 1px solid #444 !important;
+	}
+
+	table thead th {
+		background-color: #555555 !important; 
+	}
+
+	table tbody td {
+		color: #CCCCCC !important;
+		background-color: #757575 !important;
+	}
+
+</style>
+<div class="container">
+	<div class="row pt-4 pb-3">
+		<div class="col-6">
+			<h2 class="text-primary">
+				List Postaci
+			</h2>
+		</div>
+		<div class="col-6 text-end">
+			<a asp-controller="KartaPostaci" asp-action="Create" class="btn btn-primary">
+				<i class="bi bi-plus-circle"></i> Create New Hero
+			</a>
+		</div>
+	</div>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>
+					 Imie postaci
+				</th>
+				<th>
+					Rasa
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var obj in Model.OrderBy(u => u.Id))
+			{
+				// Sprawdza czy zalogowany użytkownik jest administratorem
+				var isAdmin = User.IsInRole(Role.Role_Admin);
+
+				// Sprawdza czy użytkownik zalogowany ma dostęp do tej postaci
+				var hasAccess = obj.UserEmail == User.Identity.Name || isAdmin;
+
+				if (hasAccess)
+				{
+					<tr>
+						<td>@obj.Name</td>
+						<td>@obj.Race</td>
+						<td>
+							<div class="w-75 btn-group" role="group">
+								@if (isAdmin)
+								{
+									<a asp-controller="KartaPostaci" asp-action="Edit" asp-route-heroesId="@obj.Id" class="btn btn-outline-warning mx-2">
+										<i class="bi bi-pencil-square"></i> Edit
+									</a>
+									<a asp-controller="KartaPostaci" asp-action="Delete" asp-route-heroesId="@obj.Id" class="btn btn-danger mx-2">
+										<i class="bi bi-trash3"></i> Delete
+									</a>
+								}
+								<a asp-controller="KartaPostaci" asp-action="KartaPos" asp-route-heroesId="@obj.Id" class="btn btn-info mx-2">
+									<i class="bi bi-file"></i> Karta
+								</a>
+							</div>
+						</td>
+					</tr>
+				}
+			}
+		</tbody>
+	</table>
+</div>
